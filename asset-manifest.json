@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/CodeWithImmence/PersonalPortfolio/static/css/main.f61193da.css",
+    "main.js": "/CodeWithImmence/PersonalPortfolio/static/js/main.8768d70e.js",
+    "static/js/453.854e04de.chunk.js": "/CodeWithImmence/PersonalPortfolio/static/js/453.854e04de.chunk.js",
+    "static/media/hero-bg.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/hero-bg.d4e4dfc41568f51250f8.jpg",
+    "static/media/bootstrap-icons.woff?": "/CodeWithImmence/PersonalPortfolio/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/CodeWithImmence/PersonalPortfolio/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/books-3.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/books-3.3bd107d524d9950d84f3.jpg",
+    "static/media/product-2.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/product-2.e03676392c46a11a43b5.jpg",
+    "static/media/my-profile-img.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/my-profile-img.23977f23f4ed53b4fdad.jpg",
+    "static/media/books-1.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/books-1.0cdba8895456d133d483.jpg",
+    "static/media/branding-3.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/branding-3.b7db10edbeaf1b2636f1.jpg",
+    "static/media/app-2.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/app-2.6da4d40f3db54f106a2d.jpg",
+    "static/media/app-1.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/app-1.802eed785283b8b9771e.jpg",
+    "static/media/product-1.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/product-1.3975dff84a3e21a541e2.jpg",
+    "static/media/books-2.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/books-2.e35be653c50c959ede7b.jpg",
+    "static/media/testimonials-2.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/testimonials-2.4b41e5c09698f7f4f9f9.jpg",
+    "static/media/branding-2.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/branding-2.fb2f2584ecb4a3699148.jpg",
+    "static/media/app-3.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/app-3.1328908345eb07514079.jpg",
+    "static/media/testimonials-1.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/testimonials-1.54f2a70e2804cdf6f09d.jpg",
+    "static/media/branding-1.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/branding-1.998d6e9893f2fbaedd76.jpg",
+    "static/media/testimonials-5.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/testimonials-5.8732aa377888dc5873fb.jpg",
+    "static/media/testimonials-4.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/testimonials-4.58081dc8c31bc0e1cb6c.jpg",
+    "static/media/product-3.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/product-3.74bf18a3643851c49388.jpg",
+    "static/media/testimonials-3.jpg": "/CodeWithImmence/PersonalPortfolio/static/media/testimonials-3.bec51ce16f238c7ec7b1.jpg",
+    "index.html": "/CodeWithImmence/PersonalPortfolio/index.html",
+    "main.f61193da.css.map": "/CodeWithImmence/PersonalPortfolio/static/css/main.f61193da.css.map",
+    "main.8768d70e.js.map": "/CodeWithImmence/PersonalPortfolio/static/js/main.8768d70e.js.map",
+    "453.854e04de.chunk.js.map": "/CodeWithImmence/PersonalPortfolio/static/js/453.854e04de.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f61193da.css",
+    "static/js/main.8768d70e.js"
+  ]
+}
