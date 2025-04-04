@@ -19,58 +19,64 @@ const Resumes = () => {
             <h3 className="resume-title">Sumary</h3>
 
             <div className="resume-item pb-0">
-              <h4>Brandon Johnson</h4>
+              <h4>Vishal Rajai</h4>
               <p>
                 <em>
-                  Innovative and deadline-driven Graphic Designer with 3+ years
-                  of experience designing and developing user-centered
-                  digital/print marketing material from initial concept to
-                  final, polished deliverable.
+                  Innovative and detail-oriented Software Developer & Web
+                  Developer with a Master’s in Information Technology and 3+
+                  years of experience in software development, system
+                  integrations, and technical support. Proficient in C#, Java,
+                  JavaScript, AngularJS, ReactJS, and SQL, with expertise in LMS
+                  platforms (Moodle, Canvas, Salesforce, Anthology Student,
+                  etc.). Passionate about building scalable, efficient, and
+                  high-performance applications.
                 </em>
               </p>
               <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
+                <li>Bangalore,Karnataka, IN</li>
+                {/*<li>(123) 456-7891</li>*/}
+                <li>rajaivishal.official@gmail.com</li>
               </ul>
             </div>
 
             <h3 className="resume-title">Education</h3>
             <div className="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
+              <h4>Master of Computer applications</h4>
+              <h5>2019 - 2021</h5>
               <p>
-                <em>Rochester Institute of Technology, Rochester, NY</em>
+                <em>Brindavan College, Karnataka, IN</em>
               </p>
-              <p>
+              {/*<p>
                 Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam
                 iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti
                 nerada porti sand markend
-              </p>
+              </p>*/}
             </div>
 
             <div className="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
+              <h4>Bachelor of Computer applications</h4>
+              <h5>2016 - 2019</h5>
               <p>
-                <em>Rochester Institute of Technology, Rochester, NY</em>
+                <em>
+                  Shree Swaminarayan College of Computer Science, Gujarat, IN
+                </em>
               </p>
-              <p>
+              {/*<p>
                 Quia nobis sequi est occaecati aut. Repudiandae et iusto quae
                 reiciendis et quis Eius vel ratione eius unde vitae rerum
                 voluptates asperiores voluptatem Earum molestiae consequatur
                 neque etlon sader mart dila
-              </p>
+              </p>*/}
             </div>
           </div>
 
           <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 className="resume-title">Professional Experience</h3>
             <div className="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
+              <h4>Associate Software Developer - L1 (B)</h4>
+              <h5>2021 - Present</h5>
               <p>
-                <em>Experion, New York, NY </em>
+                <em>Bangalore, Karnataka, IN </em>
               </p>
               <ul>
                 <li>
@@ -78,42 +84,34 @@ const Resumes = () => {
                   graphic, layout, and production communication materials
                 </li>
                 <li>
-                  Delegate tasks to the 7 members of the design team and provide
-                  counsel on all aspects of the project.{" "}
+                  Developed and supported integrations between Anthology
+                  Student, Moodle, Canvas, and Salesforce to ensure smooth LMS
+                  operations.{" "}
                 </li>
                 <li>
-                  Supervise the assessment of all graphic materials in order to
-                  ensure quality and accuracy of the design
+                  Troubleshot complex issues related to API integrations,
+                  authentication, and system performance.
                 </li>
                 <li>
-                  Oversee the efficient use of production project budgets
-                  ranging from $2,000 - $25,000
-                </li>
-              </ul>
-            </div>
-
-            <div className="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p>
-                <em>Stepping Stone Advertising, New York, NY</em>
-              </p>
-              <ul>
-                <li>
-                  Developed numerous marketing programs (logos,
-                  brochures,infographics, presentations, and advertisements).
+                  Worked on C#, .NET, Java, and SQL-based applications,
+                  enhancing efficiency and scalability.
                 </li>
                 <li>
-                  Managed up to 5 projects or tasks at a given time while under
-                  pressure
+                  Provided technical support, debugging, and troubleshooting for
+                  enterprise clients.
                 </li>
                 <li>
-                  Recommended and consulted with clients on the most appropriate
-                  graphic design
+                  Assisted in backend system enhancements and frontend
+                  improvements using ReactJS, AngularJS, and JavaScript.
                 </li>
                 <li>
-                  Created 4+ design presentations and proposals a month for
-                  clients and account managers
+                  Managed API integrations, database optimizations, and issue
+                  resolution for software solutions.
+                </li>
+                <li>
+                  Troubleshot complex issues related to API integrations
+                  including Web API and REST API, authentication, and system
+                  performance.
                 </li>
               </ul>
             </div>

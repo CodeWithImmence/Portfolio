@@ -21,28 +21,36 @@ const Portfolio = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
 
-    // Initialize Isotope
-    const isotope = new Isotope(".isotope-container", {
-      itemSelector: ".isotope-item",
-      layoutMode: "masonry",
-    });
-
-    // Portfolio filter event
-    const filters = document.querySelectorAll(".portfolio-filters li");
-    filters.forEach((filter) => {
-      filter.addEventListener("click", function () {
-        filters.forEach((f) => f.classList.remove("filter-active"));
-        this.classList.add("filter-active");
-        const filterValue = this.getAttribute("data-filter");
-        isotope.arrange({ filter: filterValue });
+    // Wait a short delay to ensure DOM is fully rendered
+    const timeout = setTimeout(() => {
+      // Initialize Isotope
+      const iso = new Isotope(".isotope-container", {
+        itemSelector: ".isotope-item",
+        layoutMode: "masonry",
       });
-    });
 
-    // Initialize GLightbox
-    GLightbox({ selector: ".glightbox" });
+      // Get all filter buttons
+      const filters = document.querySelectorAll(".portfolio-filters li");
+
+      filters.forEach((filter) => {
+        filter.addEventListener("click", function () {
+          // Remove existing active class
+          filters.forEach((f) => f.classList.remove("filter-active"));
+          // Add active class to selected filter
+          this.classList.add("filter-active");
+
+          // Get filter value and apply it
+          const filterValue = this.getAttribute("data-filter");
+          iso.arrange({ filter: filterValue });
+        });
+      });
+
+      // Init GLightbox
+      GLightbox({ selector: ".glightbox" });
+    }, 100); // Delay to let DOM render
 
     return () => {
-      isotope.destroy();
+      clearTimeout(timeout);
     };
   }, []);
 
@@ -58,7 +66,12 @@ const Portfolio = () => {
       </div>
 
       <div className="container">
-        <div className="isotope-layout isotope-container" data-layout="masonry">
+        <div
+          className="isotope-layout"
+          data-default-filter="*"
+          data-layout="masonry"
+          data-sort="original-order"
+        >
           <ul
             className="portfolio-filters isotope-filters"
             data-aos="fade-up"
@@ -67,65 +80,78 @@ const Portfolio = () => {
             <li data-filter="*" className="filter-active">
               All
             </li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
+            <li data-filter=".filter-app">Web Applications</li>
+            <li data-filter=".filter-product">Integrations</li>
+            <li data-filter=".filter-branding">API Development</li>
+            <li data-filter=".filter-books">LMS Support</li>
           </ul>
 
-          <div className="row gy-4" data-aos="fade-up" data-aos-delay="200">
+          <div
+            className="row gy-4 isotope-container"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             {[
-              { category: "filter-app", img: app1, title: "App 1" },
-              { category: "filter-app", img: app2, title: "App 2" },
-              { category: "filter-app", img: app3, title: "App 3" },
+              { id: 1, category: "filter-app", img: app1, title: "App 1" },
+              { id: 5, category: "filter-app", img: app2, title: "App 2" },
+              { id: 9, category: "filter-app", img: app3, title: "App 3" },
               {
+                id: 2,
                 category: "filter-product",
                 img: product1,
                 title: "Product 1",
               },
               {
+                id: 6,
                 category: "filter-product",
                 img: product2,
                 title: "Product 2",
               },
               {
+                id: 10,
                 category: "filter-product",
                 img: product3,
                 title: "Product 3",
               },
               {
+                id: 3,
                 category: "filter-branding",
                 img: branding1,
                 title: "Branding 1",
               },
               {
+                id: 7,
                 category: "filter-branding",
                 img: branding2,
                 title: "Branding 2",
               },
               {
+                id: 11,
                 category: "filter-branding",
                 img: branding3,
                 title: "Branding 3",
               },
               {
+                id: 4,
                 category: "filter-books",
                 img: books1,
                 title: "Books 1",
               },
               {
+                id: 8,
                 category: "filter-books",
                 img: books2,
                 title: "Books 2",
               },
               {
+                id: 12,
                 category: "filter-books",
                 img: books3,
                 title: "Books 3",
               },
-            ].map((item, index) => (
+            ].map((item) => (
               <div
-                key={index}
+                key={item.id}
                 className={`col-lg-4 col-md-6 portfolio-item isotope-item ${item.category}`}
               >
                 <div className="portfolio-content h-100">
@@ -135,6 +161,7 @@ const Portfolio = () => {
                     <p>Lorem ipsum dolor sit amet</p>
                     <a
                       href={item.img}
+                      data-gallery="portfolio-gallery-app"
                       className="glightbox preview-link"
                       title={item.title}
                     >
