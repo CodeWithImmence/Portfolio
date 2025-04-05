@@ -7,10 +7,8 @@ const Services = () => {
       <div className="container section-title" data-aos="fade-up">
         <h2>Services</h2>
         <p>
-          Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-          aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-          quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-          fugiat sit in iste officiis commodi quidem hic quas.
+          Delivering reliable, efficient, and scalable technology solutions in
+          the EdTech space.
         </p>
       </div>
       {/* End Section Title */}
@@ -23,17 +21,18 @@ const Services = () => {
             data-aos-delay="100"
           >
             <div className="icon flex-shrink-0">
-              <i className="bi bi-briefcase"></i>
+              <i className="bi bi-diagram-3"></i>
             </div>
             <div>
               <h4 className="title">
                 <a href="service-details.html" className="stretched-link">
-                  Lorem Ipsum
+                  Custom LMS Integrations
                 </a>
               </h4>
               <p className="description">
-                Voluptatum deleniti atque corrupti quos dolores et quas
-                molestias excepturi sint occaecati cupiditate non provident
+                Seamless integration services for platforms like Moodle, Canvas,
+                Salesforce, and Anthology Student, ensuring smooth academic
+                operations and data flow.
               </p>
             </div>
           </div>
@@ -45,17 +44,18 @@ const Services = () => {
             data-aos-delay="200"
           >
             <div className="icon flex-shrink-0">
-              <i className="bi bi-card-checklist"></i>
+              <i className="bi bi-braces"></i>
             </div>
             <div>
               <h4 className="title">
                 <a href="service-details.html" className="stretched-link">
-                  Dolor Sitema
+                  Web API & REST API Development
                 </a>
               </h4>
               <p className="description">
-                Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat tarad limino ata
+                Designing and developing secure, high-performance Web APIs and
+                RESTful services to connect systems and enhance application
+                functionality.
               </p>
             </div>
           </div>
@@ -67,17 +67,18 @@ const Services = () => {
             data-aos-delay="300"
           >
             <div className="icon flex-shrink-0">
-              <i className="bi bi-bar-chart"></i>
+              <i className="bi bi-cpu"></i>
             </div>
             <div>
               <h4 className="title">
                 <a href="service-details.html" className="stretched-link">
-                  Sed ut perspiciatis
+                  Backend Development
                 </a>
               </h4>
               <p className="description">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur
+                Robust and scalable backend solutions using C#, .NET Core, Java,
+                and Spring Boot, tailored to meet the evolving needs of
+                educational institutions.
               </p>
             </div>
           </div>
@@ -89,17 +90,18 @@ const Services = () => {
             data-aos-delay="400"
           >
             <div className="icon flex-shrink-0">
-              <i className="bi bi-binoculars"></i>
+              <i className="bi bi-tools"></i>
             </div>
             <div>
               <h4 className="title">
                 <a href="service-details.html" className="stretched-link">
-                  Magni Dolores
+                  Technical Support & Troubleshooting
                 </a>
               </h4>
               <p className="description">
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum
+                Hands-on experience in resolving complex issues, performance
+                tuning, and providing production support for mission-critical
+                applications.
               </p>
             </div>
           </div>
@@ -111,17 +113,18 @@ const Services = () => {
             data-aos-delay="500"
           >
             <div className="icon flex-shrink-0">
-              <i className="bi bi-brightness-high"></i>
+              <i className="bi bi-display"></i>
             </div>
             <div>
               <h4 className="title">
                 <a href="service-details.html" className="stretched-link">
-                  Nemo Enim
+                  Frontend Web Applications
                 </a>
               </h4>
               <p className="description">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque
+                Interactive, responsive web interfaces built with ReactJS,
+                AngularJS, HTML5, and CSS3, aligned with user experience best
+                practices.
               </p>
             </div>
           </div>
@@ -133,17 +136,17 @@ const Services = () => {
             data-aos-delay="600"
           >
             <div className="icon flex-shrink-0">
-              <i className="bi bi-calendar4-week"></i>
+              <i className="bi bi-hdd-stack"></i>
             </div>
             <div>
               <h4 className="title">
                 <a href="service-details.html" className="stretched-link">
-                  Eiusmod Tempor
+                  Database Management & Optimization
                 </a>
               </h4>
               <p className="description">
-                Et harum quidem rerum facilis est et expedita distinctio. Nam
-                libero tempore, cum soluta nobis est eligendi
+                Skilled in managing SQL Server, MySQL, and MongoDB, with a focus
+                on query optimization, data integrity, and performance.
               </p>
             </div>
           </div>

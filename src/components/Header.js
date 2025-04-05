@@ -18,16 +18,22 @@ const Header = () => {
       </a>
 
       <div className="social-links text-center">
-        <a href="https://x.com/" className="twitter">
+        <a href="https://x.com/rajaivishal41" className="twitter">
           <i className="bi bi-twitter-x"></i>
         </a>
-        <a href="https://www.facebook.com/" className="facebook">
-          <i className="bi bi-facebook"></i>
+        <a href="https://github.com/CodeWithImmence" className="facebook">
+          <i className="bi bi-github"></i>
         </a>
-        <a href="https://www.instagram.com/" className="instagram">
+        <a
+          href="https://www.instagram.com/rajaivishalofficial/"
+          className="instagram"
+        >
           <i className="bi bi-instagram"></i>
         </a>
-        <a href="https://in.linkedin.com/" className="linkedin">
+        <a
+          href="https://www.linkedin.com/in/vishalrajai41/"
+          className="linkedin"
+        >
           <i className="bi bi-linkedin"></i>
         </a>
       </div>

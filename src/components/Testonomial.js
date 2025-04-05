@@ -4,51 +4,52 @@ import { Autoplay, Pagination } from "swiper/modules"; // Corrected module impor
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay"; // Import styles for autoplay
-import testimonials1 from "../assests/img/testimonials/testimonials-1.jpg";
-import testimonials2 from "../assests/img/testimonials/testimonials-2.jpg";
-import testimonials3 from "../assests/img/testimonials/testimonials-3.jpg";
-import testimonials4 from "../assests/img/testimonials/testimonials-4.jpg";
-import testimonials5 from "../assests/img/testimonials/testimonials-5.jpg";
 
 const Testimonials = () => {
   const testimonialsData = [
     {
       quote:
-        "Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.",
-      name: "Saul Goodman",
-      title: "CEO & Founder",
-      imgSrc: testimonials1,
+        "Vishal and the team have been instrumental in resolving our Anthology Student and Canvas integration issues. Their quick response time and technical know-how ensured minimal disruption to our academic operations.",
+      name: "Jacob Smith",
+      title: "Integration Manager, PS Care College",
+      //imgSrc: testimonials1,
     },
     {
       quote:
-        "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis.",
-      name: "Sara Wilsson",
-      title: "Designer",
-      imgSrc: testimonials2,
+        "Thanks to Vishal's support, we successfully migrated our student enrollment process with Anthology Student and Salesforce. His attention to detail and commitment made a huge difference.",
+      name: "Michael Perro",
+      title: "IT Lead, Westshore Educational Group",
+      //imgSrc: testimonials2,
     },
     {
       quote:
-        "Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis.",
-      name: "Jena Karlis",
-      title: "Store Owner",
-      imgSrc: testimonials3,
+        "We encountered a complex authentication issue with our LMS, and Vishal helped us resolve it with a clear, structured approach. His expertise in REST APIs and backend systems stood out.",
+      name: "Mel Michel",
+      title: "Technical Consultant, NextGen EdTech",
+      //imgSrc: testimonials3,
     },
     {
       quote:
-        "Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim.",
-      name: "Matt Brandon",
-      title: "Freelancer",
-      imgSrc: testimonials4,
+        "Collaborating with Vishal on our Moodle and Finance CashNet integration was seamless. He was professional, knowledgeable, and always available when we needed assistance.",
+      name: "Samantha Lee",
+      title: "Project Manager, Global Learning Institute",
+      //imgSrc: testimonials4,
     },
     {
       quote:
-        "Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa.",
-      name: "John Larson",
-      title: "Entrepreneur",
-      imgSrc: testimonials5,
+        "Vishal has consistently gone above and beyond in supporting our Anthology Student and BankMobile integration. His proactive approach, clear communication, and technical insight helped us meet tight deadlines with confidence.",
+      name: "Amanda Reyes",
+      title: "Systems Analyst, Bridgeview University",
+      //imgSrc: testimonials5,
     },
   ];
-
+  const getInitials = (name) => {
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase();
+  };
   return (
     <section
       id="testimonials"
@@ -58,8 +59,8 @@ const Testimonials = () => {
       <div className="container section-title" data-aos="fade-up">
         <h2>Testimonials</h2>
         <p>
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-          consectetur velit
+          What our valued clients say about the support and integration services
+          provided.
         </p>
       </div>
 
@@ -84,11 +85,10 @@ const Testimonials = () => {
                   <span>{testimonial.quote}</span>
                   <i className="bi bi-quote quote-icon-right"></i>
                 </p>
-                <img
-                  src={testimonial.imgSrc}
-                  className="testimonial-img"
-                  alt={testimonial.name}
-                />
+                {/* Avatar with initials */}
+                <div className="testimonial-avatar">
+                  {getInitials(testimonial.name)}
+                </div>
                 <h3>{testimonial.name}</h3>
                 <h4>{testimonial.title}</h4>
               </div>

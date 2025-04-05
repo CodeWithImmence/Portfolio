@@ -1014,6 +1014,21 @@ section,
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Add this in your CSS file */
+.testimonial-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
 .testimonials .testimonial-item p::after {
   content: "";
   width: 0;

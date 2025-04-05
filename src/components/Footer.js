@@ -9,18 +9,22 @@ const Footer = () => {
         <div className="copyright text-center">
           <p>
             © <span>Copyright</span>{" "}
-            <strong className="px-1 sitename">iPortfolio</strong>{" "}
+            <strong className="px-1 sitename">Vishal Rajai</strong>{" "}
             <span>All Rights Reserved</span>
           </p>
           <p>{currentYear}</p> {/* Dynamic Year */}
         </div>
 
         <div className="credits">
-          {/* All the links in the footer should remain intact. */}
-          {/* You can delete the links only if you've purchased the pro version. */}
-          {/* Licensing information: https://bootstrapmade.com/license/ */}
-          {/* Purchase the pro version with working PHP/AJAX contact form: [buy-url] */}
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed with ❤️ by{" "}
+          <a
+            href="https://codewithimmence.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "var(--accent-color)", textDecoration: "none" }}
+          >
+            Vishal
+          </a>
         </div>
       </div>
     </footer>

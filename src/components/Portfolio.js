@@ -60,8 +60,12 @@ const Portfolio = () => {
       <div className="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
         <p>
-          Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-          aliquid fuga eum quidem.
+          A glimpse into the work I've done integrating and building impactful
+          solutions in the EdTech space. From developing backend services and
+          APIs to integrating complex platforms like Moodle, Canvas, Salesforce,
+          and Anthology Student, each project reflects a focus on performance,
+          security, and seamless user experience. Below are some highlights of
+          my contributions to both support and development initiatives.
         </p>
       </div>
 
