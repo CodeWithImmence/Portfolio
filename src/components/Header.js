@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../assests/img/my-profile-img.jpg";
+import { Link } from "react-router-dom";
+import logo from "../assests/img/my-profile-img.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Header = () => {
@@ -9,13 +10,12 @@ const Header = () => {
       <div className="profile-img">
         <img src={logo} alt="" className="img-fluid rounded-circle" />
       </div>
-      <a
-        href="index.html"
+      <Link
+        to="/"
         className="logo d-flex align-items-center justify-content-center"
       >
-        {/*<img src="./public/assets/img/logo.png" alt=""></img>*/}
-        <h1 className="sitename">Alex Smith</h1>
-      </a>
+        <h1 className="sitename">Rajai Vishal</h1>
+      </Link>
 
       <div className="social-links text-center">
         <a href="https://x.com/rajaivishal41" className="twitter">

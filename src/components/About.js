@@ -1,5 +1,5 @@
 import React from "react";
-import myProfileLogo from "../assests/img/my-profile-img.jpg";
+import myProfileLogo from "../assests/img/my-profile-img.png";
 const About = () => {
   const birthYear = 1998;
   const currentYear = new Date().getFullYear();

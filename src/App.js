@@ -13,10 +13,10 @@ import Contact from "./components/Contact.js";
 import Footer from "./components/Footer.js";
 import ScrollToTop from "./components/ScrollToTop.js";
 import Preloader from "./components/Preloader.js";
-
+import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
       <main className="main">
         <Hero />
@@ -32,7 +32,7 @@ function App() {
       <Footer />
       <ScrollToTop />
       <Preloader />
-    </>
+    </BrowserRouter>
   );
 }
 
