@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.6867a8a8.css",
-    "main.js": "/static/js/main.0bfe4bfe.js",
+    "main.js": "/static/js/main.0d360ee7.js",
     "static/js/453.854e04de.chunk.js": "/static/js/453.854e04de.chunk.js",
-    "static/media/hero-bg.jpg": "/static/media/hero-bg.d4e4dfc41568f51250f8.jpg",
+    "static/media/hero-bg.png": "/static/media/hero-bg.db4995f60d4dd1ef1dcf.png",
+    "static/media/my-profile-img.png": "/static/media/my-profile-img.8bca5e3f5e14f9a7e91d.png",
     "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "static/media/books-3.jpg": "/static/media/books-3.3bd107d524d9950d84f3.jpg",
     "static/media/product-2.jpg": "/static/media/product-2.e03676392c46a11a43b5.jpg",
-    "static/media/my-profile-img.jpg": "/static/media/my-profile-img.23977f23f4ed53b4fdad.jpg",
     "static/media/books-1.jpg": "/static/media/books-1.0cdba8895456d133d483.jpg",
     "static/media/branding-3.jpg": "/static/media/branding-3.b7db10edbeaf1b2636f1.jpg",
     "static/media/app-2.jpg": "/static/media/app-2.6da4d40f3db54f106a2d.jpg",
@@ -21,11 +21,11 @@
     "static/media/product-3.jpg": "/static/media/product-3.74bf18a3643851c49388.jpg",
     "index.html": "/index.html",
     "main.6867a8a8.css.map": "/static/css/main.6867a8a8.css.map",
-    "main.0bfe4bfe.js.map": "/static/js/main.0bfe4bfe.js.map",
+    "main.0d360ee7.js.map": "/static/js/main.0d360ee7.js.map",
     "453.854e04de.chunk.js.map": "/static/js/453.854e04de.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6867a8a8.css",
-    "static/js/main.0bfe4bfe.js"
+    "static/js/main.0d360ee7.js"
   ]
 }
