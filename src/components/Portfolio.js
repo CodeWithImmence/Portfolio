@@ -4,7 +4,7 @@ import Isotope from "isotope-layout";
 import GLightbox from "glightbox";
 import "aos/dist/aos.css";
 import "glightbox/dist/css/glightbox.css";
-import app1 from "../assests/img/portfolio/app-1.jpg";
+import app1 from "../assests/img/portfolio/Canvas_STC.png";
 import app2 from "../assests/img/portfolio/app-2.jpg";
 import app3 from "../assests/img/portfolio/app-3.jpg";
 import product1 from "../assests/img/portfolio/product-1.jpg";
@@ -13,9 +13,9 @@ import product3 from "../assests/img/portfolio/product-3.jpg";
 import branding1 from "../assests/img/portfolio/branding-1.jpg";
 import branding2 from "../assests/img/portfolio/branding-2.jpg";
 import branding3 from "../assests/img/portfolio/branding-3.jpg";
-import books1 from "../assests/img/portfolio/books-1.jpg";
-import books2 from "../assests/img/portfolio/books-2.jpg";
-import books3 from "../assests/img/portfolio/books-3.jpg";
+import books1 from "../assests/img/portfolio/Canvas_STC.png";
+import books2 from "../assests/img/portfolio/MoodleRooms_MRU.png";
+import books3 from "../assests/img/portfolio/MoodleRooms_BC.png";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -96,62 +96,101 @@ const Portfolio = () => {
             data-aos-delay="200"
           >
             {[
-              { id: 1, category: "filter-app", img: app1, title: "App 1" },
-              { id: 5, category: "filter-app", img: app2, title: "App 2" },
-              { id: 9, category: "filter-app", img: app3, title: "App 3" },
+              {
+                id: 1,
+                category: "filter-app",
+                img: app1,
+                title: "Canvas - STC",
+                description:
+                  "Canvas integration setup and sync troubleshooting for STC.",
+              },
+              {
+                id: 5,
+                category: "filter-app",
+                img: app2,
+                title: "App 2",
+                description:
+                  "Built a dynamic frontend dashboard with React & Bootstrap.",
+              },
+              {
+                id: 9,
+                category: "filter-app",
+                img: app3,
+                title: "App 3",
+                description:
+                  "Improved performance and UI consistency across modules.",
+              },
               {
                 id: 2,
                 category: "filter-product",
                 img: product1,
                 title: "Product 1",
+                description:
+                  "Integrated Salesforce with Anthology Student using APIs.",
               },
               {
                 id: 6,
                 category: "filter-product",
                 img: product2,
                 title: "Product 2",
+                description:
+                  "Worked on secure data sync between third-party apps.",
               },
               {
                 id: 10,
                 category: "filter-product",
                 img: product3,
                 title: "Product 3",
+                description:
+                  "Custom solution for role-based access control in a portal.",
               },
               {
                 id: 3,
                 category: "filter-branding",
                 img: branding1,
                 title: "Branding 1",
+                description:
+                  "Developed REST APIs for user registration and login.",
               },
               {
                 id: 7,
                 category: "filter-branding",
                 img: branding2,
                 title: "Branding 2",
+                description:
+                  "Refactored legacy APIs to improve maintainability.",
               },
               {
                 id: 11,
                 category: "filter-branding",
                 img: branding3,
                 title: "Branding 3",
+                description:
+                  "API logging and monitoring dashboard integration.",
               },
               {
                 id: 4,
                 category: "filter-books",
                 img: books1,
-                title: "Books 1",
+                title: "Canvas-STC",
+                description:
+                  "Supported Canvas data mapping with Anthology sync.",
               },
               {
                 id: 8,
                 category: "filter-books",
                 img: books2,
-                title: "Books 2",
+                title: "MoodleRooms-MRU",
+                description:
+                  "Troubleshot MoodleRooms enrollment and grade sync.",
               },
               {
                 id: 12,
                 category: "filter-books",
                 img: books3,
-                title: "Books 3",
+                title: "MoodleRooms-BC",
+                description:
+                  "User group customization for Moodle and BC requirements.",
               },
             ].map((item) => (
               <div
@@ -162,7 +201,7 @@ const Portfolio = () => {
                   <img src={item.img} className="img-fluid" alt={item.title} />
                   <div className="portfolio-info">
                     <h4>{item.title}</h4>
-                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>{item.description}</p>
                     <a
                       href={item.img}
                       data-gallery="portfolio-gallery-app"
