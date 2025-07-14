@@ -21,42 +21,126 @@ const Portfolio = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
 
-    // Wait a short delay to ensure DOM is fully rendered
+    const imagesLoaded = require("imagesloaded");
+
     const timeout = setTimeout(() => {
-      // Initialize Isotope
-      const iso = new Isotope(".isotope-container", {
-        itemSelector: ".isotope-item",
-        layoutMode: "masonry",
-      });
+      const grid = document.querySelector(".isotope-container");
 
-      // Get all filter buttons
-      const filters = document.querySelectorAll(".portfolio-filters li");
+      if (!grid) return;
 
-      filters.forEach((filter) => {
-        filter.addEventListener("click", function () {
-          // Remove existing active class
-          filters.forEach((f) => f.classList.remove("filter-active"));
-          // Add active class to selected filter
-          this.classList.add("filter-active");
-
-          // Get filter value and apply it
-          const filterValue = this.getAttribute("data-filter");
-          iso.arrange({ filter: filterValue });
+      // Wait for images to fully load
+      imagesLoaded(grid, () => {
+        const iso = new Isotope(grid, {
+          itemSelector: ".isotope-item",
+          layoutMode: "masonry",
         });
+
+        const filters = document.querySelectorAll(".portfolio-filters li");
+        filters.forEach((filter) => {
+          filter.addEventListener("click", function () {
+            filters.forEach((f) => f.classList.remove("filter-active"));
+            this.classList.add("filter-active");
+            const filterValue = this.getAttribute("data-filter");
+            iso.arrange({ filter: filterValue });
+          });
+        });
+
+        GLightbox({ selector: ".glightbox" });
       });
+    }, 100);
 
-      // Init GLightbox
-      GLightbox({ selector: ".glightbox" });
-    }, 100); // Delay to let DOM render
-
-    return () => {
-      clearTimeout(timeout);
-    };
+    return () => clearTimeout(timeout);
   }, []);
+
+  const portfolioItems = [
+    {
+      id: 1,
+      category: "filter-app",
+      img: app1,
+      title: "Canvas - STC",
+      description: "Canvas integration setup and sync troubleshooting for STC.",
+    },
+    {
+      id: 5,
+      category: "filter-app",
+      img: app2,
+      title: "App 2",
+      description: "Built a dynamic frontend dashboard with React & Bootstrap.",
+    },
+    {
+      id: 9,
+      category: "filter-app",
+      img: app3,
+      title: "App 3",
+      description: "Improved performance and UI consistency across modules.",
+    },
+    {
+      id: 2,
+      category: "filter-product",
+      img: product1,
+      title: "Product 1",
+      description: "Integrated Salesforce with Anthology Student using APIs.",
+    },
+    {
+      id: 6,
+      category: "filter-product",
+      img: product2,
+      title: "Product 2",
+      description: "Worked on secure data sync between third-party apps.",
+    },
+    {
+      id: 10,
+      category: "filter-product",
+      img: product3,
+      title: "Product 3",
+      description: "Custom solution for role-based access control in a portal.",
+    },
+    {
+      id: 3,
+      category: "filter-branding",
+      img: branding1,
+      title: "Branding 1",
+      description: "Developed REST APIs for user registration and login.",
+    },
+    {
+      id: 7,
+      category: "filter-branding",
+      img: branding2,
+      title: "Branding 2",
+      description: "Refactored legacy APIs to improve maintainability.",
+    },
+    {
+      id: 11,
+      category: "filter-branding",
+      img: branding3,
+      title: "Branding 3",
+      description: "API logging and monitoring dashboard integration.",
+    },
+    {
+      id: 4,
+      category: "filter-books",
+      img: books1,
+      title: "Canvas-STC",
+      description: "Supported Canvas data mapping with Anthology sync.",
+    },
+    {
+      id: 8,
+      category: "filter-books",
+      img: books2,
+      title: "MoodleRooms-MRU",
+      description: "Troubleshot MoodleRooms enrollment and grade sync.",
+    },
+    {
+      id: 12,
+      category: "filter-books",
+      img: books3,
+      title: "MoodleRooms-BC",
+      description: "User group customization for Moodle and BC requirements.",
+    },
+  ];
 
   return (
     <section id="portfolio" className="portfolio section light-background">
-      {/* Section Title */}
       <div className="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
         <p>
@@ -95,104 +179,7 @@ const Portfolio = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            {[
-              {
-                id: 1,
-                category: "filter-app",
-                img: app1,
-                title: "Canvas - STC",
-                description:
-                  "Canvas integration setup and sync troubleshooting for STC.",
-              },
-              {
-                id: 5,
-                category: "filter-app",
-                img: app2,
-                title: "App 2",
-                description:
-                  "Built a dynamic frontend dashboard with React & Bootstrap.",
-              },
-              {
-                id: 9,
-                category: "filter-app",
-                img: app3,
-                title: "App 3",
-                description:
-                  "Improved performance and UI consistency across modules.",
-              },
-              {
-                id: 2,
-                category: "filter-product",
-                img: product1,
-                title: "Product 1",
-                description:
-                  "Integrated Salesforce with Anthology Student using APIs.",
-              },
-              {
-                id: 6,
-                category: "filter-product",
-                img: product2,
-                title: "Product 2",
-                description:
-                  "Worked on secure data sync between third-party apps.",
-              },
-              {
-                id: 10,
-                category: "filter-product",
-                img: product3,
-                title: "Product 3",
-                description:
-                  "Custom solution for role-based access control in a portal.",
-              },
-              {
-                id: 3,
-                category: "filter-branding",
-                img: branding1,
-                title: "Branding 1",
-                description:
-                  "Developed REST APIs for user registration and login.",
-              },
-              {
-                id: 7,
-                category: "filter-branding",
-                img: branding2,
-                title: "Branding 2",
-                description:
-                  "Refactored legacy APIs to improve maintainability.",
-              },
-              {
-                id: 11,
-                category: "filter-branding",
-                img: branding3,
-                title: "Branding 3",
-                description:
-                  "API logging and monitoring dashboard integration.",
-              },
-              {
-                id: 4,
-                category: "filter-books",
-                img: books1,
-                title: "Canvas-STC",
-                description:
-                  "Supported Canvas data mapping with Anthology sync.",
-              },
-              {
-                id: 8,
-                category: "filter-books",
-                img: books2,
-                title: "MoodleRooms-MRU",
-                description:
-                  "Troubleshot MoodleRooms enrollment and grade sync.",
-              },
-              {
-                id: 12,
-                category: "filter-books",
-                img: books3,
-                title: "MoodleRooms-BC",
-                description:
-                  "User group customization for Moodle and BC requirements.",
-              },
-            ].map((item) => (
+            {portfolioItems.map((item) => (
               <div
                 key={item.id}
                 className={`col-lg-4 col-md-6 portfolio-item isotope-item ${item.category}`}
