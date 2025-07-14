@@ -1,30 +1,30 @@
 {
   "files": {
     "main.css": "/static/css/main.6867a8a8.css",
-    "main.js": "/static/js/main.16576814.js",
+    "main.js": "/static/js/main.d9d9d6a4.js",
     "static/js/453.854e04de.chunk.js": "/static/js/453.854e04de.chunk.js",
     "static/media/hero-bg.png": "/static/media/hero-bg.db4995f60d4dd1ef1dcf.png",
     "static/media/my-profile-img.png": "/static/media/my-profile-img.8bca5e3f5e14f9a7e91d.png",
     "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/MoodleRooms_MRU.png": "/static/media/MoodleRooms_MRU.963ea8ce487290333bce.png",
     "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/job-monitoring.png": "/static/media/job-monitoring.c963f2a6666685e3edd6.png",
     "static/media/Canvas_STC.png": "/static/media/Canvas_STC.8a70456134ff7a8dcd7e.png",
-    "static/media/MoodleRooms_BC.png": "/static/media/MoodleRooms_BC.24ce579bf036201b7b5a.png",
+    "static/media/job-monitoring-2.png": "/static/media/job-monitoring-2.ba5c116f0b7988d68f4f.png",
     "static/media/product-2.jpg": "/static/media/product-2.e03676392c46a11a43b5.jpg",
-    "static/media/branding-3.jpg": "/static/media/branding-3.b7db10edbeaf1b2636f1.jpg",
+    "static/media/MoodleRooms_BC.png": "/static/media/MoodleRooms_BC.4bc801cfe0ca3b30937f.png",
     "static/media/app-2.jpg": "/static/media/app-2.6da4d40f3db54f106a2d.jpg",
     "static/media/product-1.jpg": "/static/media/product-1.3975dff84a3e21a541e2.jpg",
-    "static/media/branding-2.jpg": "/static/media/branding-2.fb2f2584ecb4a3699148.jpg",
+    "static/media/job-monitoring-1.png": "/static/media/job-monitoring-1.28402cd09ce08889069a.png",
     "static/media/app-3.jpg": "/static/media/app-3.1328908345eb07514079.jpg",
-    "static/media/branding-1.jpg": "/static/media/branding-1.998d6e9893f2fbaedd76.jpg",
     "static/media/product-3.jpg": "/static/media/product-3.74bf18a3643851c49388.jpg",
     "index.html": "/index.html",
     "main.6867a8a8.css.map": "/static/css/main.6867a8a8.css.map",
-    "main.16576814.js.map": "/static/js/main.16576814.js.map",
+    "main.d9d9d6a4.js.map": "/static/js/main.d9d9d6a4.js.map",
     "453.854e04de.chunk.js.map": "/static/js/453.854e04de.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6867a8a8.css",
-    "static/js/main.16576814.js"
+    "static/js/main.d9d9d6a4.js"
   ]
 }
