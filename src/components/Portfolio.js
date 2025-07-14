@@ -9,10 +9,10 @@ import app2 from "../assests/img/portfolio/app-2.jpg";
 import app3 from "../assests/img/portfolio/app-3.jpg";
 import product1 from "../assests/img/portfolio/product-1.jpg";
 import product2 from "../assests/img/portfolio/product-2.jpg";
+import jobmonitoring from "../assests/img/portfolio/job-monitoring.png";
 import product3 from "../assests/img/portfolio/product-3.jpg";
-import branding1 from "../assests/img/portfolio/branding-1.jpg";
-import branding2 from "../assests/img/portfolio/branding-2.jpg";
-import branding3 from "../assests/img/portfolio/branding-3.jpg";
+import jobmonitoring2 from "../assests/img/portfolio/job-monitoring-2.png";
+import jobmonitoring1 from "../assests/img/portfolio/job-monitoring-1.png";
 import books1 from "../assests/img/portfolio/Canvas_STC.png";
 import books2 from "../assests/img/portfolio/MoodleRooms_MRU.png";
 import books3 from "../assests/img/portfolio/MoodleRooms_BC.png";
@@ -98,21 +98,16 @@ const Portfolio = () => {
     {
       id: 3,
       category: "filter-branding",
-      img: branding1,
-      title: "Branding 1",
-      description: "Developed REST APIs for user registration and login.",
+      img: jobmonitoring2,
+      title: "Rasmussen - Scheduled Job Monitoring Alert",
+      description:
+        "Built a core-service job monitoring alerts are sent via email with detailed job insights, minimizing downtime and data loss.",
     },
-    {
-      id: 7,
-      category: "filter-branding",
-      img: branding2,
-      title: "Branding 2",
-      description: "Refactored legacy APIs to improve maintainability.",
-    },
+
     {
       id: 11,
       category: "filter-branding",
-      img: branding3,
+      img: jobmonitoring1,
       title: "Branding 3",
       description: "API logging and monitoring dashboard integration.",
     },
@@ -136,6 +131,14 @@ const Portfolio = () => {
       img: books3,
       title: "MoodleRooms-BC",
       description: "User group customization for Moodle and BC requirements.",
+    },
+    {
+      id: 7,
+      category: "filter-branding",
+      img: jobmonitoring, // Replace with a relevant image if available
+      title: "Scheduled Job Monitoring Service",
+      description:
+        "Developed a resilient background service to monitor scheduled jobs, detect anomalies, and send automated email alerts across tenants and environments.",
     },
   ];
 
