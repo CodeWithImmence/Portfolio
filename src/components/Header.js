@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assests/img/my-profile-img.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const Header = () => {
   return (
@@ -18,23 +19,39 @@ const Header = () => {
       </Link>
 
       <div className="social-links text-center">
-        <a href="https://x.com/rajaivishal41" className="twitter">
-          <i className="bi bi-twitter-x"></i>
+        <a href="rajaivishal.official@gmail.com" className="Gmail">
+          <DotLottieReact
+            src="https://lottie.host/ea26d1b0-5e8c-4ba3-b365-1c4686f1dd76/FGsHa6uUoY.lottie"
+            autoplay
+            loop
+          />
         </a>
         <a href="https://github.com/CodeWithImmence" className="facebook">
-          <i className="bi bi-github"></i>
+          <DotLottieReact
+            src="https://lottie.host/026202ab-4b08-4dc9-969a-2c6e6f032033/bZdzSghtBV.lottie"
+            autoplay
+            loop
+          />
         </a>
         <a
           href="https://www.instagram.com/rajaivishalofficial/"
           className="instagram"
         >
-          <i className="bi bi-instagram"></i>
+          <DotLottieReact
+            src="https://lottie.host/18cda1fe-918b-42a5-9e62-cb07bc01226b/3qMpdkRX3X.lottie"
+            autoplay
+            loop
+          />
         </a>
         <a
           href="https://www.linkedin.com/in/vishalrajai41/"
           className="linkedin"
         >
-          <i className="bi bi-linkedin"></i>
+          <DotLottieReact
+            src="https://lottie.host/17e45bf3-f454-466f-b635-f195b973d684/ANguwq1pLy.lottie"
+            autoplay
+            loop
+          />
         </a>
       </div>
 
