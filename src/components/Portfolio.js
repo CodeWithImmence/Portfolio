@@ -13,6 +13,9 @@ import jobmonitoring from "../assests/img/portfolio/job-monitoring.png";
 import product3 from "../assests/img/portfolio/product-3.jpg";
 import jobmonitoring2 from "../assests/img/portfolio/job-monitoring-2.png";
 import jobmonitoring1 from "../assests/img/portfolio/job-monitoring-1.png";
+import jobmonitoring3 from "../assests/img/portfolio/job-monitoring-2.png";
+import jobmonitoring4 from "../assests/img/portfolio/job-monitoring-1.png";
+import jobmonitoring5 from "../assests/img/portfolio/job-monitoring-2.png";
 import books1 from "../assests/img/portfolio/Canvas_STC.png";
 import books2 from "../assests/img/portfolio/MoodleRooms_MRU.png";
 import books3 from "../assests/img/portfolio/MoodleRooms_BC.png";
@@ -99,17 +102,17 @@ const Portfolio = () => {
       id: 3,
       category: "filter-branding",
       img: jobmonitoring2,
-      title: "Rasmussen - Scheduled Job Monitoring Alert",
+      title: "Rasmussen – Automated Salesforce Job Monitoring Alerts",
       description:
-        "Built a core-service job monitoring alerts are sent via email with detailed job insights, minimizing downtime and data loss.",
+        "Implemented a core service that monitors scheduled Salesforce jobs and sends real-time email alerts with detailed insights, helping to minimize downtime and prevent data loss.",
     },
-
     {
       id: 11,
       category: "filter-branding",
       img: jobmonitoring1,
-      title: "Branding 3",
-      description: "API logging and monitoring dashboard integration.",
+      title: "Scheduled Job Monitoring Service (In Progress)",
+      description:
+        "Currently working on a service to monitor scheduled jobs with planned API logging and dashboard integration to improve visibility and issue detection.",
     },
     {
       id: 4,
@@ -135,10 +138,34 @@ const Portfolio = () => {
     {
       id: 7,
       category: "filter-branding",
-      img: jobmonitoring, // Replace with a relevant image if available
-      title: "Scheduled Job Monitoring Service",
+      img: jobmonitoring,
+      title: "Automated Monitoring for Scheduled Background Jobs",
       description:
-        "Developed a resilient background service to monitor scheduled jobs, detect anomalies, and send automated email alerts across tenants and environments.",
+        "Designed and implemented a robust background service to monitor scheduled jobs across multiple tenants and environments. Detects anomalies and triggers automated email alerts for timely issue resolution.",
+    },
+    {
+      id: 13,
+      category: "filter-branding",
+      img: jobmonitoring3,
+      title: "Automated Job Alerts – Problem-Only Mode",
+      description:
+        "Configured job monitoring to trigger alerts only for issues, reducing noise and ensuring focused visibility through API logging and dashboards.",
+    },
+    {
+      id: 14,
+      category: "filter-branding",
+      img: jobmonitoring4,
+      title: "Rasmussen – Boomi API Job Monitoring and Alerts",
+      description:
+        "Built a monitoring solution for Boomi API workflows using customer-specific tables to track and alert on failures and missing executions.",
+    },
+    {
+      id: 15,
+      category: "filter-branding",
+      img: jobmonitoring5,
+      title: "Automated Service Monitoring and Alert System",
+      description:
+        "Integrated backend services with centralized API logging and a monitoring dashboard to ensure proactive alerting and visibility.",
     },
   ];
 
@@ -173,7 +200,7 @@ const Portfolio = () => {
             </li>
             <li data-filter=".filter-app">Web Applications</li>
             <li data-filter=".filter-product">Integrations</li>
-            <li data-filter=".filter-branding">API Development</li>
+            <li data-filter=".filter-branding">Automation Alert</li>
             <li data-filter=".filter-books">LMS Support</li>
           </ul>
 
