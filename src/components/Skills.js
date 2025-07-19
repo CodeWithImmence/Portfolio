@@ -1,36 +1,40 @@
-import React, { useEffect, useState } from "react";
+// Skills.tsx or Skills.jsx
+
+import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+// Your skills data
 const skillsCategories = [
   {
-    title: "Programming Languages & Frameworks",
+    title: "Frontend Technologies",
+    skills: [
+      { name: "Angular", level: 90 },
+      { name: "React", level: 70 },
+      { name: "HTML", level: 90 },
+      { name: "CSS", level: 90 },
+      { name: "Bootstrap", level: 85 },
+      { name: "JavaScript", level: 80 },
+    ],
+  },
+  {
+    title: "Backend Technologies",
     skills: [
       { name: "C#", level: 95 },
-      { name: "Java", level: 90 },
-      { name: "JavaScript", level: 85 },
-      { name: "C, C++", level: 80 },
-      { name: "ASP.NET, .NET Core", level: 85 },
-      { name: "Spring Boot, Hibernate", level: 75 },
-      { name: "ReactJS, AngularJS, VueJS", level: 80 },
-      { name: "PHP, HTML5, CSS", level: 90 },
+      { name: ".NET Core", level: 95 },
+      { name: "SQL Server", level: 90 },
+      { name: "Web API", level: 90 },
+      { name: "Azure Functions", level: 70 },
     ],
   },
   {
-    title: "Databases & Cloud Technologies",
+    title: "Tools",
     skills: [
-      { name: "SQL Server 2018", level: 85 },
-      { name: "MySQL, MongoDB", level: 80 },
-      { name: "Entity Framework, Mongoose", level: 75 },
-      { name: "Cloud Development, Microservices", level: 70 },
-    ],
-  },
-  {
-    title: "Development & Integration",
-    skills: [
-      { name: "Web API, REST API, AJAX", level: 85 },
-      { name: "Moodle, Canvas, Salesforce Integrations", level: 80 },
-      { name: "OOP, Unit Testing, Debugging", level: 90 },
+      { name: "Azure DevOps", level: 85 },
+      { name: "Git", level: 85 },
+      { name: "Postman", level: 80 },
+      { name: "Swagger", level: 85 },
     ],
   },
 ];
@@ -40,23 +44,24 @@ const Skills = () => {
     skillsCategories.map((category) => category.skills.map(() => 0))
   );
 
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
+  }, []);
 
-    // Ensure animation triggers correctly
-    const timer = setTimeout(() => {
+  useEffect(() => {
+    if (inView) {
       setProgress(
         skillsCategories.map((category) =>
           category.skills.map((skill) => skill.level)
         )
       );
-    }, 500);
-
-    return () => clearTimeout(timer); // Cleanup timeout
-  }, []);
+    }
+  }, [inView]);
 
   return (
-    <section id="skills" className="skills section light-background">
+    <section id="skills" className="skills section light-background" ref={ref}>
       <div className="container section-title" data-aos="fade-up">
         <h2>Skills</h2>
         <p>Enhancing efficiency through technology and innovation</p>
@@ -82,7 +87,7 @@ const Skills = () => {
                         role="progressbar"
                         style={{
                           width: `${progress[categoryIndex][skillIndex]}%`,
-                          transition: "width 1.5s ease-in-out", // Smooth transition
+                          transition: "width 1.5s ease-in-out",
                         }}
                         aria-valuenow={progress[categoryIndex][skillIndex]}
                         aria-valuemin="0"
