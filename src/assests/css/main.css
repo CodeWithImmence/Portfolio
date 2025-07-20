@@ -363,7 +363,9 @@ h6 {
   display: block;
   background-color: rgba(33, 37, 41, 0.03);
 }
-
+.navlink {
+  cursor: pointer;
+}
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -656,6 +658,15 @@ section,
   color: var(--accent-color);
   line-height: 0;
 }
+.resume .section-title p,
+.resume .resume-item p,
+.resume .resume-item ul li {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #333;
+}
 
 /*--------------------------------------------------------------
 # Stats Section
@@ -689,7 +700,17 @@ section,
   font-family: var(--heading-font);
   font-size: 14px;
 }
-
+.resume .resume-item p,
+.resume .resume-item ul li,
+.resume .section-title p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  font-family: var(--heading-font);
+  padding-right: 10px;
+}
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
@@ -784,6 +805,15 @@ section,
   top: 0;
   background: var(--background-color);
   border: 2px solid var(--accent-color);
+}
+.resume .container.section-title p,
+.resume .resume-item p,
+.resume .resume-item ul li {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #333;
 }
 
 /*--------------------------------------------------------------
@@ -898,7 +928,15 @@ section,
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
 }
-
+.portfolio .section-title p {
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 15px;
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -951,7 +989,13 @@ section,
   line-height: 24px;
   font-size: 14px;
 }
-
+.section p,
+.section .description {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.7;
+  font-size: 15px;
+}
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -1063,6 +1107,16 @@ section,
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
 }
+
+.testimonials p,
+.testimonials .testimonial-item p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.7;
+  font-size: 15px;
+  color: #333;
+}
+
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -1297,11 +1351,4 @@ section,
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
 }

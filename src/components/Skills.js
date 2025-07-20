@@ -64,7 +64,10 @@ const Skills = () => {
     <section id="skills" className="skills section light-background" ref={ref}>
       <div className="container section-title" data-aos="fade-up">
         <h2>Skills</h2>
-        <p>Enhancing efficiency through technology and innovation</p>
+        <p>
+          Turning complex challenges into clean, functional solutions through a
+          mix of code, creativity, and problem-solving finesse.
+        </p>
       </div>
 
       <div className="container" data-aos="fade-up" data-aos-delay="100">

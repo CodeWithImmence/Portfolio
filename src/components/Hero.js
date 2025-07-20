@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
-//import heroLogo from "../assests/img/hero-bg.png";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const Hero = () => {

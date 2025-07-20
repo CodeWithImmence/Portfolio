@@ -9,25 +9,26 @@ const About = () => {
       <div className="container section-title" data-aos="fade-up">
         <h2>About</h2>
         <p>
-          Hi, I’m Vishal — an Associate Software Developer at Anthology, with a
-          Master’s degree in Information Technology and a strong technical
-          foundation in C#, Java, AngularJS, and ReactJS. With over three years
-          of hands-on experience supporting and integrating education technology
-          solutions, I specialize in Learning Management Systems (LMS) and
-          enterprise platforms such as Moodle, Canvas, Salesforce, PCI Express,
-          Finance CashNet, BankMobile, and Anthology Student. I’ve worked
-          closely with clients to troubleshoot critical issues, manage
-          escalations, align team efforts, and ensure seamless platform
-          integrations — all while maintaining a strong focus on quality,
-          security, and user experience. My role often bridges the gap between
-          development and support, giving me a deep understanding of backend
-          systems, frontend frameworks, and real-world user needs. I am now
-          expanding my focus back into full-time development, where I aim to
-          build robust, scalable applications using modern technologies like
-          AngularJS and ReactJS to create intuitive, high-performance user
-          interfaces. At the heart of what I do is a passion for solving
-          problems, continuous learning, and collaborating with teams to develop
-          impactful software solutions.
+          Hi, I’m Vishal — an Associate Software Developer at Anthology with a
+          Master’s degree in Information Technology and over three years of
+          industry experience in designing, integrating, and supporting
+          enterprise-scale educational technology solutions. My core expertise
+          lies in full-stack development with a strong command of technologies
+          including C#, Java, AngularJS, and ReactJS. Throughout my career, I’ve
+          played a critical role in bridging support and engineering teams —
+          ensuring seamless integration, maintenance, and optimization of
+          complex systems like Moodle, Canvas, Salesforce, Anthology Student,
+          BankMobile, and CashNet. My experience includes managing high-impact
+          incidents, driving root-cause analysis, and implementing long-term
+          fixes that enhance platform reliability and performance. As I
+          transition further into development-focused roles, I am deeply
+          invested in building robust, scalable, and user-centric applications.
+          I bring a unique blend of backend system insight and frontend design
+          sensibility, enabling me to develop solutions that are not only
+          technically sound but also aligned with real-world user needs. Driven
+          by curiosity, collaboration, and a commitment to quality, I
+          continuously strive to evolve as a developer and contribute to
+          impactful software that delivers measurable value.
         </p>
       </div>
       <div className="container" data-aos="fade-up" data-aos-delay="100">

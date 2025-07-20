@@ -6,38 +6,36 @@ const Resumes = () => {
       <div className="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
         <p>
-          Passionate and performance-driven Software Developer with 3+ years of
-          experience building scalable web applications, system integrations,
-          and enterprise solutions. Proficient in C#, .NET, Java, Angular, and
-          SQL with hands-on expertise in LMS platforms like Moodle, Canvas, and
-          Salesforce. Dedicated to crafting efficient, secure, and maintainable
-          code for real-world business needs.
+          Innovative and solutions-driven Software Developer with a strong track
+          record of delivering high-impact applications in the EdTech domain.
+          Known for a meticulous approach to software quality, cross-functional
+          collaboration, and proactive problem-solving. Experienced in turning
+          complex business requirements into robust, scalable solutions that
+          enhance operational efficiency and user experience. Committed to
+          continuous learning and delivering measurable value through clean
+          architecture, performance tuning, and secure coding practices.
         </p>
       </div>
 
       <div className="container">
         <div className="row">
           <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 className="resume-title">Sumary</h3>
+            <h3 className="resume-title">Automation Alerting</h3>
 
             <div className="resume-item pb-0">
-              <h4>Vishal Rajai</h4>
               <p>
                 <em>
-                  Innovative and detail-oriented Software Developer & Web
-                  Developer with a Master’s in Information Technology and 3+
-                  years of experience in software development, system
-                  integrations, and technical support. Proficient in C#, Java,
-                  JavaScript, AngularJS, ReactJS, and SQL, with expertise in LMS
-                  platforms (Moodle, Canvas, Salesforce, Anthology Student,
-                  etc.). Passionate about building scalable, efficient, and
-                  high-performance applications.
+                  Scheduled Job Monitoring & Alerting Systems. Automated SQL
+                  Server Agent Job Automation. Modular & Configurable .NET
+                  Service Architecture. Angular-based Admin Dashboards. Service
+                  Health & Queue Monitoring.Secure Email Integration (SendGrid,
+                  Graph API)
                 </em>
               </p>
               <ul>
-                <li>Bangalore,Karnataka, IN</li>
-                {/*<li>(123) 456-7891</li>*/}
-                <li>rajaivishal.official@gmail.com</li>
+                {/*<li>Bangalore,Karnataka, IN</li>
+                <li>(123) 456-7891</li>
+                <li>rajaivishal.official@gmail.com</li>*/}
               </ul>
             </div>
 

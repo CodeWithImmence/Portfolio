@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -25,9 +26,9 @@ const Services = () => {
             </div>
             <div>
               <h4 className="title">
-                <a href="service-details.html" className="stretched-link">
+                <Link to="/service-details" className="stretched-link">
                   Custom LMS Integrations
-                </a>
+                </Link>
               </h4>
               <p className="description">
                 Seamless integration services for platforms like Moodle, Canvas,
@@ -48,9 +49,9 @@ const Services = () => {
             </div>
             <div>
               <h4 className="title">
-                <a href="service-details.html" className="stretched-link">
+                <Link to="/service-details" className="stretched-link">
                   Web API & REST API Development
-                </a>
+                </Link>
               </h4>
               <p className="description">
                 Designing and developing secure, high-performance Web APIs and
@@ -71,9 +72,9 @@ const Services = () => {
             </div>
             <div>
               <h4 className="title">
-                <a href="service-details.html" className="stretched-link">
+                <Link to="/service-details" className="stretched-link">
                   Backend Development
-                </a>
+                </Link>
               </h4>
               <p className="description">
                 Robust and scalable backend solutions using C#, .NET Core, Java,
@@ -94,9 +95,9 @@ const Services = () => {
             </div>
             <div>
               <h4 className="title">
-                <a href="service-details.html" className="stretched-link">
+                <Link to="/service-details" className="stretched-link">
                   Technical Support & Troubleshooting
-                </a>
+                </Link>
               </h4>
               <p className="description">
                 Hands-on experience in resolving complex issues, performance
@@ -117,9 +118,9 @@ const Services = () => {
             </div>
             <div>
               <h4 className="title">
-                <a href="service-details.html" className="stretched-link">
+                <Link to="/service-details" className="stretched-link">
                   Frontend Web Applications
-                </a>
+                </Link>
               </h4>
               <p className="description">
                 Interactive, responsive web interfaces built with ReactJS,
@@ -140,9 +141,9 @@ const Services = () => {
             </div>
             <div>
               <h4 className="title">
-                <a href="service-details.html" className="stretched-link">
+                <Link to="/service-details" className="stretched-link">
                   Database Management & Optimization
-                </a>
+                </Link>
               </h4>
               <p className="description">
                 Skilled in managing SQL Server, MySQL, and MongoDB, with a focus

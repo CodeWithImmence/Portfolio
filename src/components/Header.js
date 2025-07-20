@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assests/img/my-profile-img.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-
+import { Link as ScrollLink } from "react-scroll";
 const Header = () => {
   useEffect(() => {
     const headerToggleBtn = document.querySelector(".header-toggle");
@@ -113,34 +113,64 @@ const Header = () => {
       <nav id="navmenu" className="navmenu">
         <ul>
           <li>
-            <a href="#hero" className="active">
+            <ScrollLink
+              to="hero"
+              smooth={true}
+              duration={500}
+              className="active navlink"
+            >
               <i className="bi bi-house navicon"></i>Home
-            </a>
+            </ScrollLink>
           </li>
           <li>
-            <a href="#about">
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={500}
+              className="navlink"
+            >
               <i className="bi bi-person navicon"></i> About
-            </a>
+            </ScrollLink>
           </li>
           <li>
-            <a href="#resume">
+            <ScrollLink
+              to="resume"
+              smooth={true}
+              duration={500}
+              className="navlink"
+            >
               <i className="bi bi-file-earmark-text navicon"></i> Resume
-            </a>
+            </ScrollLink>
           </li>
           <li>
-            <a href="#portfolio">
+            <ScrollLink
+              to="portfolio"
+              smooth={true}
+              duration={500}
+              className="navlink"
+            >
               <i className="bi bi-images navicon"></i> Portfolio
-            </a>
+            </ScrollLink>
           </li>
           <li>
-            <a href="#services">
+            <ScrollLink
+              to="services"
+              smooth={true}
+              duration={500}
+              className="navlink"
+            >
               <i className="bi bi-hdd-stack navicon"></i> Services
-            </a>
+            </ScrollLink>
           </li>
           <li>
-            <a href="#contact">
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="navlink"
+            >
               <i className="bi bi-envelope navicon"></i> Contact
-            </a>
+            </ScrollLink>
           </li>
         </ul>
       </nav>
