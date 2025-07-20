@@ -1,14 +1,14 @@
 /**
 * Template Name: iPortfolio
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Template URL: https://github.com/CodeWithImmence/Portfolio
+* Updated: July 21 2025 with Bootstrap v5.3.3
+* Author: Vishal Rajai
+* License: https://codewithimmence.in/
 */
 
 /*--------------------------------------------------------------
 # Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
+# Help: https://codewithimmence.in/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
@@ -658,9 +658,9 @@ section,
   color: var(--accent-color);
   line-height: 0;
 }
-.resume .section-title p,
-.resume .resume-item p,
-.resume .resume-item ul li {
+.about .section-title p,
+.about .about-item p,
+.about .about-item ul li {
   text-align: justify;
   text-justify: inter-word;
   line-height: 1.8;
@@ -692,25 +692,21 @@ section,
   font-weight: 700;
   margin-left: 60px;
 }
-
+.stats .stats-item {
+  padding: 20px;
+}
 .stats .stats-item p {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   padding: 15px 0 0 0;
   margin: 0 0 0 60px;
+  text-align: left;
+  text-align-last: left;
+  hyphens: auto;  
+  text-justify: inter-word;
   font-family: var(--heading-font);
   font-size: 14px;
 }
-.resume .resume-item p,
-.resume .resume-item ul li,
-.resume .section-title p {
-  text-align: justify;
-  text-justify: inter-word;
-  line-height: 1.8;
-  font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-family: var(--heading-font);
-  padding-right: 10px;
-}
+
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
@@ -989,8 +985,8 @@ section,
   line-height: 24px;
   font-size: 14px;
 }
-.section p,
-.section .description {
+.services p,
+.services .description {
   text-align: justify;
   text-justify: inter-word;
   line-height: 1.7;
