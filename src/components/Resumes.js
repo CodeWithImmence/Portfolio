@@ -6,10 +6,12 @@ const Resumes = () => {
       <div className="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
         <p>
-          Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-          aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-          quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-          fugiat sit in iste officiis commodi quidem hic quas.
+          Passionate and performance-driven Software Developer with 3+ years of
+          experience building scalable web applications, system integrations,
+          and enterprise solutions. Proficient in C#, .NET, Java, Angular, and
+          SQL with hands-on expertise in LMS platforms like Moodle, Canvas, and
+          Salesforce. Dedicated to crafting efficient, secure, and maintainable
+          code for real-world business needs.
         </p>
       </div>
 
