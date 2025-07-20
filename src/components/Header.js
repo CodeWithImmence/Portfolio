@@ -1,10 +1,65 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assests/img/my-profile-img.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const Header = () => {
+  useEffect(() => {
+    const headerToggleBtn = document.querySelector(".header-toggle");
+    const header = document.querySelector("#header");
+
+    const toggleHeader = () => {
+      header.classList.toggle("header-show");
+      headerToggleBtn.classList.toggle("bi-list");
+      headerToggleBtn.classList.toggle("bi-x");
+    };
+
+    const handleNavClick = () => {
+      if (header.classList.contains("header-show")) {
+        toggleHeader();
+      }
+    };
+
+    const handleDropdownToggle = (e) => {
+      e.preventDefault();
+      const parent = e.currentTarget.parentNode;
+      parent.classList.toggle("active");
+
+      const dropdown = parent.nextElementSibling;
+      if (dropdown) dropdown.classList.toggle("dropdown-active");
+
+      e.stopPropagation();
+    };
+
+    if (headerToggleBtn) {
+      headerToggleBtn.addEventListener("click", toggleHeader);
+    }
+
+    const navLinks = document.querySelectorAll("#navmenu a");
+    navLinks.forEach((link) => link.addEventListener("click", handleNavClick));
+
+    const dropdownToggles = document.querySelectorAll(
+      ".navmenu .toggle-dropdown"
+    );
+    dropdownToggles.forEach((toggle) =>
+      toggle.addEventListener("click", handleDropdownToggle)
+    );
+
+    return () => {
+      if (headerToggleBtn) {
+        headerToggleBtn.removeEventListener("click", toggleHeader);
+      }
+
+      navLinks.forEach((link) =>
+        link.removeEventListener("click", handleNavClick)
+      );
+
+      dropdownToggles.forEach((toggle) =>
+        toggle.removeEventListener("click", handleDropdownToggle)
+      );
+    };
+  }, []);
   return (
     <header id="header" className="header dark-background d-flex flex-column">
       <i className="header-toggle d-xl-none bi bi-list"></i>
