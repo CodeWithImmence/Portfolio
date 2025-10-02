@@ -17,15 +17,32 @@ const Contact = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setStatusMessage("Your message has been sent. Thank you!");
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // prevent default form submit
 
-    // Here, you can integrate an API call or email service.
-    console.log("Form Data Submitted:", formData);
+    setStatusMessage("Sending..."); // show sending status
 
-    // Reset form after submission
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    try {
+      // Replace with your local n8n webhook URL
+      const response = await fetch(
+        "http://localhost:5678/webhook/portfolio-contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData), // send your form data to n8n
+        }
+      );
+
+      if (response.ok) {
+        setStatusMessage("✅ Message sent successfully!");
+        setFormData({ name: "", email: "", subject: "", message: "" }); // reset form
+      } else {
+        setStatusMessage("❌ Failed to send message.");
+      }
+    } catch (err) {
+      setStatusMessage("⚠️ Error: " + err.message);
+    }
 
     // Clear message after a few seconds
     setTimeout(() => setStatusMessage(""), 5000);
