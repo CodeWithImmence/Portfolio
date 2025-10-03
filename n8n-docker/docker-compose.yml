@@ -1,4 +1,0 @@
-FROM n8nio/n8n
-
-# Optional: persist workflows and credentials in a volume
-# VOLUME ["/home/node/.n8n"]
