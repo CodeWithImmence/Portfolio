@@ -26,11 +26,11 @@ const Contact = () => {
     try {
       // Replace with your local n8n webhook URL
       const response = await fetch(
-        "https://striking-determination-production-15d7.up.railway.app/webhook/portfolio-contact",
+        "https://workflow.codewithimmence.in/webhook/portfolio-contact",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData), // send your form data to n8n
+          body: JSON.stringify(formData),
         }
       );
 
