@@ -1,0 +1,338 @@
+
+/*--------------------------------------------------------------
+# Resume Section
+--------------------------------------------------------------*/
+.resume .resume-title {
+  color: var(--heading-color);
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--accent-color);
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: var(--background-color);
+  border: 2px solid var(--accent-color);
+}
+.resume .container.section-title p,
+.resume .resume-item p,
+.resume .resume-item ul li {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #333;
+}
+/* === Resume Layout === */
+.resume .resume-title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resume .resume-item {
+  background: #ffffff;
+  padding: 20px 25px;
+  border-left: 3px solid var(--accent-color);
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.resume .resume-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* === Emoji Animation === */
+.resume ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.resume ul li:hover {
+  color: var(--accent-color);
+}
+
+.resume ul li::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 4px;
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.resume ul li:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Emoji title fade === */
+.emoji-title {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.emoji-title:hover {
+  transform: scale(1.03);
+}
+
+/* === Subtle intro styling === */
+.intro-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+/* === Smooth emoji float animation === */
+.resume .resume-title::before {
+  content: "";
+  animation: emojiFloat 3s ease-in-out infinite;
+}
+
+/* === Resume Section Wrapper Background === */
+.resume {
+  background: #f9fbfd; /* Light subtle background */
+  padding: 80px 0;
+  position: relative;
+}
+.resume::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle at center, rgba(0, 190, 255, 0.15), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Optional gradient background for a more premium feel */
+.resume::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f9fbfd 0%, #f1f5f9 100%);
+  z-index: 0;
+}
+
+/* Ensure resume content sits above background layer */
+.resume .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* === Resume Card Style === */
+.resume .resume-item {
+  background: #ffffff;
+  border: none;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.resume .resume-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Accent left line like timeline indicator */
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25px;
+  height: 60%;
+  width: 4px;
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
+/* === Section Title Styling === */
+.resume .section-title h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.resume .section-title h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: var(--accent-color);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+
+/* === Typography inside cards === */
+.resume .resume-title {
+  color: var(--heading-color);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.resume .resume-item p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+  .resume {
+    padding: 60px 20px;
+  }
+
+  .resume .resume-item {
+    margin-bottom: 25px;
+  }
+}
+/* Sub-role sections (L1/L2) inside Anthology card */
+.sub-role {
+  margin-bottom: 20px;
+}
+
+.sub-role h5 {
+  color: var(--accent-color);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.role-period {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Promotion arrow styling */
+.promotion-divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #4c9aff;
+  font-weight: 600;
+  margin: 15px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.promotion-divider .arrow {
+  animation: bounceUp 1.2s infinite alternate;
+}
+
+@keyframes bounceUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-4px);
+  }
+}
+
+/* Divider line between sub-roles */
+.role-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, #ddd, transparent);
+  margin: 15px 0;
+}
+
+
+@keyframes emojiFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Make sure columns align */
+.resume .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+

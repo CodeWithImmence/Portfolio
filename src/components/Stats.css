@@ -1,0 +1,176 @@
+/*--------------------------------------------------------------
+# Stats Section
+--------------------------------------------------------------*/
+
+.stats {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+
+/* === Grid Layout === */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* === Stats Card === */
+.stats-card {
+  position: relative;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  padding: 35px 25px;
+  text-align: center;
+  transition: all 0.4s ease;
+  width: 100%;
+  max-width: 280px;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* === Floating animated gradient border (continuous & breathing) === */
+.stats-card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border-radius: 20px;
+  background: linear-gradient(
+    60deg,
+    #00c6ff,
+    #007bff,
+    #00ffcc,
+    #007bff,
+    #00c6ff
+  );
+  background-size: 300% 300%;
+  animation: moveBorder 6s linear infinite, glowPulse 3s ease-in-out infinite;
+  z-index: 0;
+  opacity: 0.7; /* default subtle glow */
+  pointer-events: none;
+  filter: blur(0.5px);
+}
+
+/* === Gradient Flow Animation === */
+@keyframes moveBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* === Breathing Pulse Animation === */
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.6;
+    filter: brightness(1) blur(0.5px);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.3) blur(1px);
+  }
+}
+
+/* === Inner Content === */
+.stats-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* === Hover Lift === */
+.stats-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* === Floating Gradient Icon === */
+.stats-icon {
+  background: linear-gradient(135deg, #00b4db, #00c97c);
+  color: #fff;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 auto 22px auto;
+  font-size: 32px;
+  box-shadow: 0 8px 18px rgba(0, 180, 219, 0.25);
+  transition: all 0.4s ease;
+  animation: floatIdle 3.5s ease-in-out infinite;
+}
+
+/* === Icon Hover Glow === */
+.stats-card:hover .stats-icon {
+  transform: translateY(-10px) scale(1.08);
+  box-shadow: 0 0 25px rgba(0, 200, 170, 0.35),
+    0 0 45px rgba(0, 180, 255, 0.25);
+}
+
+/* === Floating animation === */
+@keyframes floatIdle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* === Numbers and Labels === */
+.stats-content h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.stats-content h5 {
+  font-size: 1.05rem;
+  color: var(--accent-color, #00b4db);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stats-content p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+/* === Responsive === */
+@media (max-width: 991px) {
+  .stats-card {
+    margin-bottom: 20px;
+  }
+  .stats-content h3 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-card {
+    max-width: 100%;
+    padding: 25px 20px;
+  }
+  .stats-content p {
+    max-width: 100%;
+  }
+}

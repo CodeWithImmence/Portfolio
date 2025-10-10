@@ -134,6 +134,16 @@ const Header = () => {
           </li>
           <li>
             <ScrollLink
+              to="skills"
+              smooth={true}
+              duration={500}
+              className="navlink"
+            >
+              <i className="bi bi-lightning-charge navicon"></i> Skills
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
               to="resume"
               smooth={true}
               duration={500}
@@ -149,7 +159,7 @@ const Header = () => {
               duration={500}
               className="navlink"
             >
-              <i className="bi bi-images navicon"></i> Portfolio
+              <i className="bi bi-images navicon"></i> Projects
             </ScrollLink>
           </li>
           <li>

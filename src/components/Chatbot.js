@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FiX } from "react-icons/fi";
+import "./Chatbot.css";
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,9 +63,11 @@ const Chatbot = () => {
       );
 
       const data = await res.json();
-
+      const replyText = Array.isArray(data)
+        ? data[0]?.reply
+        : data?.reply || "⚠️ No response received.";
       setTimeout(() => {
-        setMessages([...newMessages, { from: "bot", text: data.reply }]);
+        setMessages([...newMessages, { from: "bot", text: replyText }]);
         setIsTyping(false);
       }, 1000);
     } catch (err) {
@@ -76,13 +79,13 @@ const Chatbot = () => {
     }
   };
 
-  // 🔄 Handle open/close event for hiding scroll-up arrow
   const toggleChat = () => {
     setIsOpen(!isOpen);
     window.dispatchEvent(
       new CustomEvent("chatbotToggle", { detail: { isOpen: !isOpen } })
     );
   };
+
   useEffect(() => {
     const handleChatToggle = (e) => {
       const isOpen = e.detail.isOpen;
@@ -97,7 +100,7 @@ const Chatbot = () => {
   return (
     <div className="chatbot-container">
       {isOpen && (
-        <div className="chat-window">
+        <div className="chat-window glass-window fade-in-up">
           {/* 💬 Header */}
           <div className="chat-header enhanced-header">
             <div className="chat-header-info">
@@ -117,19 +120,21 @@ const Chatbot = () => {
               </div>
             </div>
             <button className="chat-close" onClick={() => setIsOpen(false)}>
-              <FiX size={12} strokeWidth={2.5} />
+              <FiX size={14} strokeWidth={2.5} />
             </button>
           </div>
 
           {/* Messages */}
           <div className="chat-messages">
             {messages.map((msg, i) => (
-              <div key={i} className={`msg ${msg.from} fade-in`}>
-                {msg.text}
-              </div>
+              <div
+                key={i}
+                className={`msg ${msg.from}`}
+                dangerouslySetInnerHTML={{ __html: msg.text }}
+              ></div>
             ))}
             {isTyping && (
-              <div className="msg bot typing-bubble fade-in">
+              <div className="msg bot typing-bubble">
                 <span className="dot"></span>
                 <span className="dot"></span>
                 <span className="dot"></span>
@@ -151,7 +156,10 @@ const Chatbot = () => {
         </div>
       )}
 
-      <button className="chat-toggle" onClick={toggleChat}>
+      <button
+        className={`chat-toggle ${isOpen ? "open" : ""}`}
+        onClick={toggleChat}
+      >
         💬
       </button>
     </div>

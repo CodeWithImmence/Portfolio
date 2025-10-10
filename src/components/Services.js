@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Services.css";
 
 const Services = () => {
   return (
@@ -15,16 +16,19 @@ const Services = () => {
       {/* End Section Title */}
 
       <div className="container">
-        <div className="row gy-4">
-          <div
-            className="col-lg-4 col-md-6 service-item d-flex"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div className="icon flex-shrink-0">
-              <i className="bi bi-diagram-3"></i>
-            </div>
-            <div>
+        <div className="row gx-4 gy-4">
+          {" "}
+          {/* ✅ Adds space between cards */}
+          {/* Service Item 1 */}
+          <div className="col-lg-4 col-md-6 d-flex">
+            <div
+              className="service-item d-flex flex-column flex-grow-1"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div className="icon flex-shrink-0">
+                <i className="bi bi-diagram-3"></i>
+              </div>
               <h4 className="title">
                 <Link to="/service-details" className="stretched-link">
                   Custom LMS Integrations
@@ -37,17 +41,16 @@ const Services = () => {
               </p>
             </div>
           </div>
-          {/* End Service Item */}
-
-          <div
-            className="col-lg-4 col-md-6 service-item d-flex"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div className="icon flex-shrink-0">
-              <i className="bi bi-braces"></i>
-            </div>
-            <div>
+          {/* Service Item 2 */}
+          <div className="col-lg-4 col-md-6 d-flex">
+            <div
+              className="service-item d-flex flex-column flex-grow-1"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div className="icon flex-shrink-0">
+                <i className="bi bi-braces"></i>
+              </div>
               <h4 className="title">
                 <Link to="/service-details" className="stretched-link">
                   Web API & REST API Development
@@ -60,17 +63,16 @@ const Services = () => {
               </p>
             </div>
           </div>
-          {/* End Service Item */}
-
-          <div
-            className="col-lg-4 col-md-6 service-item d-flex"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div className="icon flex-shrink-0">
-              <i className="bi bi-cpu"></i>
-            </div>
-            <div>
+          {/* Service Item 3 */}
+          <div className="col-lg-4 col-md-6 d-flex">
+            <div
+              className="service-item d-flex flex-column flex-grow-1"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div className="icon flex-shrink-0">
+                <i className="bi bi-cpu"></i>
+              </div>
               <h4 className="title">
                 <Link to="/service-details" className="stretched-link">
                   Backend Development
@@ -83,17 +85,16 @@ const Services = () => {
               </p>
             </div>
           </div>
-          {/* End Service Item */}
-
-          <div
-            className="col-lg-4 col-md-6 service-item d-flex"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <div className="icon flex-shrink-0">
-              <i className="bi bi-tools"></i>
-            </div>
-            <div>
+          {/* Service Item 4 */}
+          <div className="col-lg-4 col-md-6 d-flex">
+            <div
+              className="service-item d-flex flex-column flex-grow-1"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div className="icon flex-shrink-0">
+                <i className="bi bi-tools"></i>
+              </div>
               <h4 className="title">
                 <Link to="/service-details" className="stretched-link">
                   Technical Support & Troubleshooting
@@ -106,17 +107,16 @@ const Services = () => {
               </p>
             </div>
           </div>
-          {/* End Service Item */}
-
-          <div
-            className="col-lg-4 col-md-6 service-item d-flex"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            <div className="icon flex-shrink-0">
-              <i className="bi bi-display"></i>
-            </div>
-            <div>
+          {/* Service Item 5 */}
+          <div className="col-lg-4 col-md-6 d-flex">
+            <div
+              className="service-item d-flex flex-column flex-grow-1"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div className="icon flex-shrink-0">
+                <i className="bi bi-display"></i>
+              </div>
               <h4 className="title">
                 <Link to="/service-details" className="stretched-link">
                   Frontend Web Applications
@@ -129,17 +129,16 @@ const Services = () => {
               </p>
             </div>
           </div>
-          {/* End Service Item */}
-
-          <div
-            className="col-lg-4 col-md-6 service-item d-flex"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <div className="icon flex-shrink-0">
-              <i className="bi bi-hdd-stack"></i>
-            </div>
-            <div>
+          {/* Service Item 6 */}
+          <div className="col-lg-4 col-md-6 d-flex">
+            <div
+              className="service-item d-flex flex-column flex-grow-1"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <div className="icon flex-shrink-0">
+                <i className="bi bi-hdd-stack"></i>
+              </div>
               <h4 className="title">
                 <Link to="/service-details" className="stretched-link">
                   Database Management & Optimization
@@ -151,10 +150,10 @@ const Services = () => {
               </p>
             </div>
           </div>
-          {/* End Service Item */}
         </div>
       </div>
     </section>
   );
 };
+
 export default Services;

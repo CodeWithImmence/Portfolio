@@ -1,0 +1,122 @@
+/*--------------------------------------------------------------
+# Services Section – Modern Card Layout
+--------------------------------------------------------------*/
+.services {
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+
+
+/* === Service Card === */
+.service-item {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 35px 25px 30px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.12);
+}
+
+/* === Icon Circle === */
+.service-item .icon {
+  background: var(--accent-color, #0d6efd);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2);
+}
+
+.service-item .icon i {
+  font-size: 30px;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.service-item:hover .icon {
+  background: #fff;
+  border: 2px solid var(--accent-color, #0d6efd);
+}
+
+.service-item:hover .icon i {
+  color: var(--accent-color, #0d6efd);
+}
+
+/* === Title & Description === */
+.service-item .title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--heading-color, #222);
+  margin-bottom: 12px;
+}
+
+.service-item .title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.service-item .title a:hover {
+  color: var(--accent-color, #0d6efd);
+}
+
+.service-item .description {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+/* === Hover Accent Border Animation === */
+.service-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: var(--accent-color, #0d6efd);
+  transition: width 0.3s ease;
+  border-radius: 3px;
+}
+
+.service-item:hover::after {
+  width: 60%;
+}
+
+/* === Responsive Grid === */
+@media (max-width: 991px) {
+  .service-item {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-item .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .service-item .icon i {
+    font-size: 26px;
+  }
+}

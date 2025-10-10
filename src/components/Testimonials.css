@@ -1,0 +1,190 @@
+/*--------------------------------------------------------------
+# Modern Testimonials Section – with Soft Animated Gradient Border
+--------------------------------------------------------------*/
+.testimonials {
+  background: #f9fafc;
+  padding: 80px 0;
+}
+
+/* === Testimonial Card === */
+.testimonial-card {
+  position: relative;
+  background: #fff;
+  border-radius: 18px;
+  padding: 35px 28px 30px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* === Floating Animated Gradient Border (same as stats, softer) === */
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border-radius: 20px;
+  background: linear-gradient(
+    60deg,
+    rgba(0, 198, 255, 0.35),
+    rgba(13, 110, 253, 0.4),
+    rgba(0, 255, 204, 0.35),
+    rgba(13, 110, 253, 0.4),
+    rgba(0, 198, 255, 0.35)
+  );
+  background-size: 300% 300%;
+  animation: moveBorder 6s linear infinite, glowPulse 4s ease-in-out infinite;
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
+  filter: blur(0.5px);
+}
+
+/* === Gradient Flow Animation === */
+@keyframes moveBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* === Breathing Pulse Animation === */
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.5;
+    filter: brightness(1) blur(0.5px);
+  }
+  50% {
+    opacity: 0.9;
+    filter: brightness(1.25) blur(1px);
+  }
+}
+
+/* === Inner Content stays above animated border === */
+.testimonial-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* === Hover Lift === */
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 35px rgba(13, 110, 253, 0.12);
+}
+
+/* === Quote === */
+.testimonial-card .quote-icon {
+  font-size: 70px;
+  line-height: 0;
+  color: var(--accent-color, #0d6efd);
+  opacity: 0.2;
+  position: absolute;
+  top: 55px;
+  left: 30px;
+  font-family: Georgia, serif;
+}
+
+.testimonial-card .testimonial-quote {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: justify;
+  font-style: italic;
+  margin-top: 40px;
+}
+
+/* === Footer (Avatar + Info) === */
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+/* === Avatar === */
+.testimonial-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #0d6efd, #4f9eff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.25);
+}
+
+.testimonial-avatar:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 0 18px rgba(13, 110, 253, 0.35),
+              0 0 35px rgba(13, 110, 253, 0.2);
+  background: linear-gradient(135deg, #4f9eff, #0d6efd);
+}
+
+/* === Footer Text === */
+.testimonial-footer h3 {
+  font-size: 17px;
+  margin: 0;
+  color: #111;
+  font-weight: 700;
+}
+
+.testimonial-footer h4 {
+  font-size: 14px;
+  color: #666;
+  margin: 2px 0 0 0;
+}
+
+/* === Swiper Pagination === */
+.testimonials .swiper-pagination {
+  margin-top: 40px;
+  position: relative;
+}
+
+.testimonials .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border: 1px solid var(--accent-color, #0d6efd);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.testimonials .swiper-pagination-bullet-active {
+  background: var(--accent-color, #0d6efd);
+  transform: scale(1.2);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 30px 22px;
+  }
+
+  .testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+  }
+
+  .testimonial-card .quote-icon {
+    font-size: 55px;
+  }
+}

@@ -1,0 +1,171 @@
+/*--------------------------------------------------------------
+# Portfolio Section - Clean Centered Layout
+--------------------------------------------------------------*/
+.portfolio {
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+/* === Filter Buttons Centered === */
+.portfolio .portfolio-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.portfolio .portfolio-filters li {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: #f9f9f9;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li.filter-active {
+  background: var(--accent-color);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* === Portfolio Card === */
+.portfolio-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px; 
+  height: 100%; /* ensures uniform height */
+}
+
+/* Equalize card height visually */
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* === Image === */
+.portfolio-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease;
+}
+
+/* === Hover Zoom & Overlay === */
+.portfolio-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 110, 253, 0.05);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.portfolio-card:hover::before {
+  opacity: 1;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.05);
+}
+
+/* === Info Section === */
+/* Keep text section consistent */
+.portfolio-info {
+  padding: 20px;
+  min-height: 150px; /* Adjust based on your content density */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.portfolio-info h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+}
+
+.portfolio-info p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+
+.portfolio-card:hover .portfolio-links {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+.portfolio-links a {
+  color: var(--accent-color );
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.portfolio-links a:hover {
+  color: var(--accent-color);
+}
+
+
+.portfolio-links {
+  position: absolute;
+  bottom: 12px;
+  right: 18px;
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  padding: 6px 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  z-index: 5;
+  transform: translateY(8px);
+  transition: all 0.3s ease;
+}
+
+
+/* === Equal Height Columns in the Grid === */
+.portfolio .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.portfolio .col-lg-4,
+.portfolio .col-md-6 {
+  display: flex;
+  align-items: stretch;
+}
+
+/* === Responsive === */
+@media (max-width: 991px) {
+  .portfolio-card img {
+    height: 200px;
+  }
+}

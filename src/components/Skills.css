@@ -1,0 +1,231 @@
+/*--------------------------------------------------------------
+# Modern Animated Skills Section (Aligned with Resume)
+--------------------------------------------------------------*/
+
+.skills {
+  padding: 60px 0;
+  background: var(--background-color);
+}
+
+/* --- Skills container alignment --- */
+.skills-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 25px;
+  box-sizing: border-box;
+}
+
+/* --- Skill cards --- */
+.skills-card {
+  position: relative;
+  background: var(--card-bg, #fff);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 25px 30px;
+  transition: all 0.4s ease;
+  border: 1px solid transparent;
+  flex: 1 1 calc(33.333% - 25px);
+  min-width: 300px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* === Animated Gradient Border (Continuous Glow) === */
+.skills-card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border-radius: 18px;
+  background: linear-gradient(
+    60deg,
+    #00c6ff,
+    #007bff,
+    #00ffcc,
+    #007bff,
+    #00c6ff
+  );
+  background-size: 300% 300%;
+  animation: moveSkillBorder 6s linear infinite, glowSkillPulse 3s ease-in-out infinite;
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
+  filter: blur(0.5px);
+  transition: all 0.4s ease;
+}
+
+/* === On Hover — Brighter, Faster Border === */
+.skills-card:hover::before {
+  opacity: 1;
+  filter: brightness(1.5) blur(1px);
+  animation: moveSkillBorder 3s linear infinite, glowSkillPulseFast 1.5s ease-in-out infinite;
+}
+
+/* === Border Flow Animation === */
+@keyframes moveSkillBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Gentle Idle Glow === */
+@keyframes glowSkillPulse {
+  0%, 100% { opacity: 0.6; filter: brightness(1) blur(0.5px); }
+  50% { opacity: 0.9; filter: brightness(1.2) blur(1px); }
+}
+
+/* === Stronger Pulse on Hover === */
+@keyframes glowSkillPulseFast {
+  0%, 100% { opacity: 0.8; filter: brightness(1.3) blur(0.8px); }
+  50% { opacity: 1; filter: brightness(1.6) blur(1.2px); }
+}
+
+/* --- Hover Lift --- */
+.skills-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Section Heading --- */
+.skills-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Skill items --- */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.skill-item {
+  text-align: center;
+}
+
+/* --- Circle progress (with rotating gradient ring) --- */
+.circle-progress {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: conic-gradient(
+    var(--accent-color) 0%,
+    rgba(200, 200, 200, 0.2) 0%
+  );
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* === Rotating Gradient Animation === */
+.circle-progress::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    var(--accent-color),
+    #00b4db,
+    #00ffcc,
+    #007bff,
+    var(--accent-color)
+  );
+  animation: rotateRing 8s linear infinite;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+/* Mask inner white circle to show percentage clearly */
+.circle-progress::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  background: var(--card-bg, #fff);
+  z-index: 1;
+}
+
+/* === Rotating Ring Animation === */
+@keyframes rotateRing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* --- Inner Circle Content --- */
+.circle-inner {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.skill-percent {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  position: relative;
+  z-index: 3;
+}
+
+.skill-name {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-color, #333);
+}
+
+/* --- Hover Glow for Circle --- */
+.circle-progress:hover::before {
+  animation: rotateRing 4s linear infinite;
+  filter: brightness(1.4);
+  opacity: 1;
+}
+
+/* --- Dark Mode --- */
+body.dark-mode {
+  --section-bg: #0d1117;
+  --card-bg: #161b22;
+  --text-color: #e6edf3;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .skills-wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .skills-card {
+    flex: 1 1 100%;
+  }
+
+  .circle-progress {
+    width: 80px;
+    height: 80px;
+  }
+}

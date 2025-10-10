@@ -6,9 +6,9 @@ import About from "./components/About";
 import Stats from "./components/Stats";
 import Skills from "./components/Skills";
 import Resumes from "./components/Resumes.js";
-import Portfolio from "./components/Portfolio.js";
+import Projects from "./components/Projects.js";
 import Services from "./components/Services.js";
-import Testimonials from "./components/Testonomial.js";
+import Testimonials from "./components/Testimonials.js";
 import Contact from "./components/Contact.js";
 import Footer from "./components/Footer.js";
 import ScrollToTop from "./components/ScrollToTop.js";
@@ -29,7 +29,7 @@ function App() {
         <Stats />
         <Skills />
         <Resumes />
-        <Portfolio />
+        <Projects />
         <Services />
         <Testimonials />
         <Contact />

@@ -1,18 +1,21 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import Isotope from "isotope-layout";
+import "./Projects.css";
 import GLightbox from "glightbox";
 import "aos/dist/aos.css";
 import "glightbox/dist/css/glightbox.css";
+import imagesLoaded from "imagesloaded";
+
 import app1 from "../assests/img/portfolio/Canvas_STC.png";
 import app2 from "../assests/img/portfolio/app-2.jpg";
 import app3 from "../assests/img/portfolio/app-3.jpg";
 import product1 from "../assests/img/portfolio/product-1.jpg";
 import product2 from "../assests/img/portfolio/product-2.jpg";
-import jobmonitoring from "../assests/img/portfolio/job-monitoring.png";
 import product3 from "../assests/img/portfolio/product-3.jpg";
-import jobmonitoring2 from "../assests/img/portfolio/job-monitoring-2.png";
+import jobmonitoring from "../assests/img/portfolio/job-monitoring.png";
 import jobmonitoring1 from "../assests/img/portfolio/job-monitoring-1.png";
+import jobmonitoring2 from "../assests/img/portfolio/job-monitoring-2.png";
 import jobmonitoring3 from "../assests/img/portfolio/job-monitoring-2.png";
 import jobmonitoring4 from "../assests/img/portfolio/job-monitoring-1.png";
 import jobmonitoring5 from "../assests/img/portfolio/job-monitoring-2.png";
@@ -24,14 +27,10 @@ const Portfolio = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
 
-    const imagesLoaded = require("imagesloaded");
-
     const timeout = setTimeout(() => {
       const grid = document.querySelector(".isotope-container");
-
       if (!grid) return;
 
-      // Wait for images to fully load
       imagesLoaded(grid, () => {
         const iso = new Isotope(grid, {
           itemSelector: ".isotope-item",
@@ -64,76 +63,39 @@ const Portfolio = () => {
       description: "Canvas integration setup and sync troubleshooting for STC.",
     },
     {
-      id: 5,
+      id: 2,
       category: "filter-app",
       img: app2,
       title: "App 2",
       description: "Built a dynamic frontend dashboard with React & Bootstrap.",
     },
     {
-      id: 9,
+      id: 3,
       category: "filter-app",
       img: app3,
       title: "App 3",
       description: "Improved performance and UI consistency across modules.",
     },
     {
-      id: 2,
+      id: 4,
       category: "filter-product",
       img: product1,
       title: "Product 1",
       description: "Integrated Salesforce with Anthology Student using APIs.",
     },
     {
-      id: 6,
+      id: 5,
       category: "filter-product",
       img: product2,
       title: "Product 2",
       description: "Worked on secure data sync between third-party apps.",
     },
     {
-      id: 10,
+      id: 6,
       category: "filter-product",
       img: product3,
       title: "Product 3",
       description: "Custom solution for role-based access control in a portal.",
-    },
-    {
-      id: 3,
-      category: "filter-branding",
-      img: jobmonitoring2,
-      title: "Rasmussen – Automated Salesforce Job Monitoring Alerts",
-      description:
-        "Implemented a core service that monitors scheduled Salesforce jobs and sends real-time email alerts with detailed insights, helping to minimize downtime and prevent data loss.",
-    },
-    {
-      id: 11,
-      category: "filter-branding",
-      img: jobmonitoring1,
-      title: "Scheduled Job Monitoring Service (In Progress)",
-      description:
-        "Currently working on a service to monitor scheduled jobs with planned API logging and dashboard integration to improve visibility and issue detection.",
-    },
-    {
-      id: 4,
-      category: "filter-books",
-      img: books1,
-      title: "Canvas-STC",
-      description: "Supported Canvas data mapping with Anthology sync.",
-    },
-    {
-      id: 8,
-      category: "filter-books",
-      img: books2,
-      title: "MoodleRooms-MRU",
-      description: "Troubleshot MoodleRooms enrollment and grade sync.",
-    },
-    {
-      id: 12,
-      category: "filter-books",
-      img: books3,
-      title: "MoodleRooms-BC",
-      description: "User group customization for Moodle and BC requirements.",
     },
     {
       id: 7,
@@ -144,7 +106,23 @@ const Portfolio = () => {
         "Designed and implemented a robust background service to monitor scheduled jobs across multiple tenants and environments. Detects anomalies and triggers automated email alerts for timely issue resolution.",
     },
     {
-      id: 13,
+      id: 8,
+      category: "filter-branding",
+      img: jobmonitoring1,
+      title: "Scheduled Job Monitoring Service (In Progress)",
+      description:
+        "Service to monitor scheduled jobs with planned API logging and dashboard integration to improve visibility and issue detection.",
+    },
+    {
+      id: 9,
+      category: "filter-branding",
+      img: jobmonitoring2,
+      title: "Rasmussen – Automated Salesforce Job Monitoring Alerts",
+      description:
+        "Implemented a core service that monitors scheduled Salesforce jobs and sends real-time email alerts with detailed insights, minimizing downtime and preventing data loss.",
+    },
+    {
+      id: 10,
       category: "filter-branding",
       img: jobmonitoring3,
       title: "Automated Job Alerts – Problem-Only Mode",
@@ -152,7 +130,7 @@ const Portfolio = () => {
         "Configured job monitoring to trigger alerts only for issues, reducing noise and ensuring focused visibility through API logging and dashboards.",
     },
     {
-      id: 14,
+      id: 11,
       category: "filter-branding",
       img: jobmonitoring4,
       title: "Rasmussen – Boomi API Job Monitoring and Alerts",
@@ -160,26 +138,46 @@ const Portfolio = () => {
         "Built a monitoring solution for Boomi API workflows using customer-specific tables to track and alert on failures and missing executions.",
     },
     {
-      id: 15,
+      id: 12,
       category: "filter-branding",
       img: jobmonitoring5,
       title: "Automated Service Monitoring and Alert System",
       description:
         "Integrated backend services with centralized API logging and a monitoring dashboard to ensure proactive alerting and visibility.",
     },
+    {
+      id: 13,
+      category: "filter-books",
+      img: books1,
+      title: "Canvas-STC",
+      description: "Supported Canvas data mapping with Anthology sync.",
+    },
+    {
+      id: 14,
+      category: "filter-books",
+      img: books2,
+      title: "MoodleRooms-MRU",
+      description: "Troubleshot MoodleRooms enrollment and grade sync.",
+    },
+    {
+      id: 15,
+      category: "filter-books",
+      img: books3,
+      title: "MoodleRooms-BC",
+      description: "User group customization for Moodle and BC requirements.",
+    },
   ];
 
   return (
     <section id="portfolio" className="portfolio section light-background">
       <div className="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
+        <h2>Projects</h2>
         <p>
           A glimpse into the work I've done integrating and building impactful
           solutions in the EdTech space. From developing backend services and
           APIs to integrating complex platforms like Moodle, Canvas, Salesforce,
           and Anthology Student, each project reflects a focus on performance,
-          security, and seamless user experience. Below are some highlights of
-          my contributions to both support and development initiatives.
+          security, and seamless user experience.
         </p>
       </div>
 
@@ -190,6 +188,7 @@ const Portfolio = () => {
           data-layout="masonry"
           data-sort="original-order"
         >
+          {/* === FILTER BUTTONS === */}
           <ul
             className="portfolio-filters isotope-filters"
             data-aos="fade-up"
@@ -204,6 +203,7 @@ const Portfolio = () => {
             <li data-filter=".filter-books">LMS Support</li>
           </ul>
 
+          {/* === PORTFOLIO GRID === */}
           <div
             className="row gy-4 isotope-container"
             data-aos="fade-up"
@@ -212,25 +212,29 @@ const Portfolio = () => {
             {portfolioItems.map((item) => (
               <div
                 key={item.id}
-                className={`col-lg-4 col-md-6 portfolio-item isotope-item ${item.category}`}
+                className={`col-lg-4 col-md-6 isotope-item ${item.category}`}
               >
-                <div className="portfolio-content h-100">
-                  <img src={item.img} className="img-fluid" alt={item.title} />
+                <div className="portfolio-card">
+                  <img src={item.img} alt={item.title} className="img-fluid" />
                   <div className="portfolio-info">
                     <h4>{item.title}</h4>
                     <p>{item.description}</p>
+                  </div>
+
+                  <div className="portfolio-links">
                     <a
                       href={item.img}
-                      data-gallery="portfolio-gallery-app"
-                      className="glightbox preview-link"
+                      data-gallery="portfolio-gallery"
+                      className="glightbox"
                       title={item.title}
                     >
                       <i className="bi bi-zoom-in"></i>
                     </a>
                     <a
-                      href="portfolio-details.html"
+                      href="#!"
                       className="details-link"
                       title="More Details"
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="bi bi-link-45deg"></i>
                     </a>
