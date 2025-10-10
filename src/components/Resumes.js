@@ -144,7 +144,7 @@ const Resumes = () => {
               {/* L1 Role */}
               <div className="sub-role">
                 <h5>💻 Associate Software Developer – L1 (B)</h5>
-                <p className="role-period">2019 - 2021</p>
+                <p className="role-period">2021 - Present</p>
                 <ul>
                   <li>
                     🧠 Developed LMS integrations between Anthology Student and
