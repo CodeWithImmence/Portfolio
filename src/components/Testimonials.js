@@ -53,7 +53,7 @@ const Testimonials = () => {
       className="testimonials section light-background"
     >
       <div className="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
+        <h2>Professional review</h2>
         <p>
           Hear from our clients about their experience with our integration and
           support services.

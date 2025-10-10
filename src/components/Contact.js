@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Contact.css";
 
 const Contact = () => {
   // State for form inputs

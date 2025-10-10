@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "./Header.css";
 import { Link } from "react-router-dom";
 import logo from "../assests/img/my-profile-img.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -170,6 +171,16 @@ const Header = () => {
               className="navlink"
             >
               <i className="bi bi-hdd-stack navicon"></i> Services
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="testimonials"
+              smooth={true}
+              duration={500}
+              className="navlink"
+            >
+              <i className="bi bi-chat-quote navicon"></i> Professional review
             </ScrollLink>
           </li>
           <li>

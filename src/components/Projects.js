@@ -34,7 +34,7 @@ const Portfolio = () => {
       imagesLoaded(grid, () => {
         const iso = new Isotope(grid, {
           itemSelector: ".isotope-item",
-          layoutMode: "masonry",
+          layoutMode: "fitRows", // ✅ change from masonry to fitRows
         });
 
         const filters = document.querySelectorAll(".portfolio-filters li");
@@ -215,7 +215,13 @@ const Portfolio = () => {
                 className={`col-lg-4 col-md-6 isotope-item ${item.category}`}
               >
                 <div className="portfolio-card">
-                  <img src={item.img} alt={item.title} className="img-fluid" />
+                  <div className="portfolio-image">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="img-fluid"
+                    />
+                  </div>
                   <div className="portfolio-info">
                     <h4>{item.title}</h4>
                     <p>{item.description}</p>

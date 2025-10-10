@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import "./Hero.css";
 import Typed from "typed.js";
 import AOS from "aos";
 import "aos/dist/aos.css";

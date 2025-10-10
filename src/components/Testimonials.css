@@ -19,9 +19,20 @@
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+  min-height: 380px;
   z-index: 0;
 }
+/* === Equal Height Columns for Testimonials === */
+.testimonials .row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.testimonials .col-lg-4,
+.testimonials .col-md-6 {
+  display: flex;
+  align-items: stretch;
+}
 /* === Floating Animated Gradient Border (same as stats, softer) === */
 .testimonial-card::before {
   content: "";
@@ -99,9 +110,9 @@
 .testimonial-card .testimonial-quote {
   color: #333;
   font-size: 15px;
-  line-height: 1.7;
-  text-align: justify;
+  line-height: 1.7;  
   font-style: italic;
+   align-items: center;
   margin-top: 40px;
 }
 

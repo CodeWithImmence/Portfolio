@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./ScrollToTop.css";
 import { FaArrowUp } from "react-icons/fa"; // Using FontAwesome for icon
 
 const ScrollToTop = () => {

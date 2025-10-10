@@ -1,3 +1,6 @@
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
 .scroll-top {
   position: fixed;
   visibility: hidden;
@@ -21,7 +24,7 @@
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 20px; /* Move up when active */
+  bottom: 90px; /* Move up when active */
 }
 
 .scroll-top:hover {
