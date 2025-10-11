@@ -43,7 +43,7 @@
 }
 
 .resume .resume-item:last-child {
-  padding-bottom: 0;
+  padding-bottom: 5px;
 }
 
 .resume .resume-item::before {
@@ -60,7 +60,7 @@
 .resume .container.section-title p,
 .resume .resume-item p,
 .resume .resume-item ul li {
-  text-align: justify;
+  text-align: left;
   text-justify: inter-word;
   line-height: 1.8;
   font-size: 16px;
@@ -194,7 +194,9 @@
   transition: all 0.3s ease;
   position: relative;
 }
-
+.resume .resume-item:pd-0{
+  padding-bottom: 5px;
+}
 .resume .resume-item:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);

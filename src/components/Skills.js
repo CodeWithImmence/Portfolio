@@ -22,6 +22,7 @@ const skillsCategories = [
     color: "#8a2be2",
     skills: [
       { name: "C#", level: 95 },
+      { name: "Java", level: 95 },
       { name: ".NET Core", level: 90 },
       { name: "SQL Server", level: 90 },
       { name: "Web API", level: 88 },

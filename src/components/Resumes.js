@@ -24,7 +24,7 @@ const Resumes = () => {
           {/* Left Column */}
           <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 className="resume-title">🤖 Chatbot Automation</h3>
-            <div className="resume-item pb-0">
+            <div className="resume-item pd-0">
               <p>
                 <em>
                   Designed intelligent chatbot and portfolio automation using
@@ -59,7 +59,7 @@ const Resumes = () => {
             </div>
 
             <h3 className="resume-title">⚙️ Automation Alerting</h3>
-            <div className="resume-item pb-0">
+            <div className="resume-item pd-0">
               <p>
                 <em>
                   Scheduled Job Monitoring & Alerting Systems. Automated SQL
@@ -107,7 +107,7 @@ const Resumes = () => {
               <div className="sub-role">
                 <h5>🚀 Technical Consultant II – L2 (B)</h5>
                 <p className="role-period">2021 - Present</p>
-                <ul>
+                <ul className="list-unstyled">
                   <li>
                     🧩 Led integrations between Anthology Student, Moodle,
                     Canvas, and Salesforce to enhance interoperability.

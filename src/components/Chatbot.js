@@ -105,21 +105,28 @@ const Chatbot = () => {
           <div className="chat-header enhanced-header">
             <div className="chat-header-info">
               <div className="avatar-wrapper">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
-                  alt="Assistant Avatar"
-                  className="chat-avatar"
-                />
+                <div className="chat-avatar-initials">RV</div>
                 <div className="avatar-glow"></div>
               </div>
+
               <div>
-                <div className="chat-title">RV’s AI Assistant</div>
+                <div className="chat-title"> AI Assistant</div>
                 <div className="chat-status">
                   <span className="online-dot"></span> Active now
                 </div>
               </div>
             </div>
-            <button className="chat-close" onClick={() => setIsOpen(false)}>
+            <button
+              className="chat-close"
+              onClick={() => {
+                setIsOpen(false);
+                window.dispatchEvent(
+                  new CustomEvent("chatbotToggle", {
+                    detail: { isOpen: false },
+                  })
+                );
+              }}
+            >
               <FiX size={14} strokeWidth={2.5} />
             </button>
           </div>

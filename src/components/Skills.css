@@ -126,6 +126,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
   position: relative;
   background: conic-gradient(
     var(--accent-color) 0%,
