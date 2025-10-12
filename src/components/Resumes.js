@@ -98,7 +98,7 @@ const Resumes = () => {
             {/* Combined Anthology Experience */}
             <div className="resume-item">
               <h4>Anthology Inc.</h4>
-              <h5>2019 - Present</h5>
+
               <p>
                 <em>🏢 Bangalore, Karnataka, IN</em>
               </p>

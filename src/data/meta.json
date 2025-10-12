@@ -1,0 +1,40 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rajai Vishal",
+  "url": "https://www.codewithimmence.in/",
+  "image": "https://www.codewithimmence.in/assets/img/my-profile-img.jpg",
+  "jobTitle": "Technical Consultant II",
+  "description": "I’m Rajai Vishal — a passionate Full Stack Developer, Designer, and Freelancer. I build modern, responsive web apps with React, Node.js, and Tailwind CSS.",
+  "sameAs": [
+    "https://github.com/codewithimmence",
+    "https://www.linkedin.com/in/vishalrajai41/l",
+    "https://x.com/rajaivishal41",
+    "https://www.youtube.com/@OnEyeGamingOP"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "CodeWithImmence"
+  },
+  "alumniOf": {
+    "@type": "Brindavan College",
+    "name": "BCU"
+  },
+  "knowsAbout": [
+    "React.js",
+    "Node.js",
+    "JavaScript",
+    "C#",
+    "Java",
+    "Azure",
+    "AWS",
+    "MongoDB",
+    "Express.js",
+    "Web Development",
+    "UI/UX Design"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "India"
+  }
+}
