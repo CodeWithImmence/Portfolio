@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="credits">
           Designed with ❤️ by{" "}
           <a
-            href="https://codewithimmence.in/"
+            href="https://www.codewithimmence.in/"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: "var(--accent-color)", textDecoration: "none" }}

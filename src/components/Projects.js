@@ -7,21 +7,21 @@ import "aos/dist/aos.css";
 import "glightbox/dist/css/glightbox.css";
 import imagesLoaded from "imagesloaded";
 
-import app1 from "../assests/img/portfolio/Canvas_STC.png";
-import app2 from "../assests/img/portfolio/app-2.jpg";
+import ChatBotWF from "../assests/img/portfolio/chatbot-wf.png";
+import ContactWF from "../assests/img/portfolio/contact-wf.png";
 import app3 from "../assests/img/portfolio/app-3.jpg";
-import product1 from "../assests/img/portfolio/product-1.jpg";
-import product2 from "../assests/img/portfolio/product-2.jpg";
-import product3 from "../assests/img/portfolio/product-3.jpg";
+import IntegrtionPCI from "../assests/img/portfolio/IntegrtionPCI.png";
+import IntegrtionPCICred from "../assests/img/portfolio/IntegrtionPCICred.png";
+import IntegrtionPCIPayment from "../assests/img/portfolio/IntegrtionPCIPayment.png";
 import jobmonitoring from "../assests/img/portfolio/job-monitoring.png";
 import jobmonitoring1 from "../assests/img/portfolio/job-monitoring-1.png";
 import jobmonitoring2 from "../assests/img/portfolio/job-monitoring-2.png";
 import jobmonitoring3 from "../assests/img/portfolio/job-monitoring-2.png";
 import jobmonitoring4 from "../assests/img/portfolio/job-monitoring-1.png";
 import jobmonitoring5 from "../assests/img/portfolio/job-monitoring-2.png";
-import books1 from "../assests/img/portfolio/Canvas_STC.png";
-import books2 from "../assests/img/portfolio/MoodleRooms_MRU.png";
-import books3 from "../assests/img/portfolio/MoodleRooms_BC.png";
+import Canvas_STC from "../assests/img/portfolio/Canvas_STC.png";
+import MoodleRooms_MRU from "../assests/img/portfolio/MoodleRooms_MRU.png";
+import MoodleRooms_BC from "../assests/img/portfolio/MoodleRooms_BC.png";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -58,16 +58,18 @@ const Portfolio = () => {
     {
       id: 1,
       category: "filter-app",
-      img: app1,
-      title: "Canvas - STC",
-      description: "Canvas integration setup and sync troubleshooting for STC.",
+      img: ChatBotWF,
+      title: "ChatBotWF",
+      description:
+        "Designed and automated chatbot workflows to streamline user interactions and system responses.",
     },
     {
       id: 2,
       category: "filter-app",
-      img: app2,
-      title: "App 2",
-      description: "Built a dynamic frontend dashboard with React & Bootstrap.",
+      img: ContactWF,
+      title: "ContactWF",
+      description:
+        "Developed an automated contact management workflow for data collection, notifications, and tracking.",
     },
     {
       id: 3,
@@ -79,22 +81,24 @@ const Portfolio = () => {
     {
       id: 4,
       category: "filter-product",
-      img: product1,
-      title: "Product 1",
-      description: "Integrated Salesforce with Anthology Student using APIs.",
+      img: IntegrtionPCI,
+      title: "Integrtion PCI",
+      description:
+        "Implemented PCI-compliant integration between PCI-compliant systems and Anthology Student ledger card for secure data exchange.",
     },
     {
       id: 5,
       category: "filter-product",
-      img: product2,
-      title: "Product 2",
-      description: "Worked on secure data sync between third-party apps.",
+      img: IntegrtionPCICred,
+      title: "Integrtion PCI Creditcard",
+      description:
+        "Built a robust payment integration with role-based access and secure transaction handling.eveloped secure credit card processing workflows aligned with PCI standards.",
     },
     {
       id: 6,
       category: "filter-product",
-      img: product3,
-      title: "Product 3",
+      img: IntegrtionPCIPayment,
+      title: "Integrtion PCI Payment",
       description: "Custom solution for role-based access control in a portal.",
     },
     {
@@ -148,21 +152,21 @@ const Portfolio = () => {
     {
       id: 13,
       category: "filter-books",
-      img: books1,
+      img: Canvas_STC,
       title: "Canvas-STC",
       description: "Supported Canvas data mapping with Anthology sync.",
     },
     {
       id: 14,
       category: "filter-books",
-      img: books2,
+      img: MoodleRooms_MRU,
       title: "MoodleRooms-MRU",
       description: "Troubleshot MoodleRooms enrollment and grade sync.",
     },
     {
       id: 15,
       category: "filter-books",
-      img: books3,
+      img: MoodleRooms_BC,
       title: "MoodleRooms-BC",
       description: "User group customization for Moodle and BC requirements.",
     },
@@ -197,7 +201,7 @@ const Portfolio = () => {
             <li data-filter="*" className="filter-active">
               All
             </li>
-            <li data-filter=".filter-app">Web Applications</li>
+            <li data-filter=".filter-app">AI Automation WF</li>
             <li data-filter=".filter-product">Integrations</li>
             <li data-filter=".filter-branding">Automation Alert</li>
             <li data-filter=".filter-books">LMS Support</li>
