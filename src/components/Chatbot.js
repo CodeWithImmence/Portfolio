@@ -54,7 +54,7 @@ const Chatbot = () => {
 
     try {
       const res = await fetch(
-        "https://workflow.codewithimmence.in/webhook/chatbot",
+        "https://n8n-production-42d1.up.railway.app/webhook/chatbot",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
