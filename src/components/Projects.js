@@ -9,7 +9,7 @@ import imagesLoaded from "imagesloaded";
 
 import ChatBotWF from "../assests/img/portfolio/chatbot-wf.png";
 import ContactWF from "../assests/img/portfolio/contact-wf.png";
-import app3 from "../assests/img/portfolio/app-3.jpg";
+import TaskWF from "../assests/img/portfolio/task_wf.png";
 import IntegrtionPCI from "../assests/img/portfolio/IntegrtionPCI.png";
 import IntegrtionPCICred from "../assests/img/portfolio/IntegrtionPCICred.png";
 import IntegrtionPCIPayment from "../assests/img/portfolio/IntegrtionPCIPayment.png";
@@ -74,9 +74,10 @@ const Portfolio = () => {
     {
       id: 3,
       category: "filter-app",
-      img: app3,
-      title: "App 3",
-      description: "Improved performance and UI consistency across modules.",
+      img: TaskWF,
+      title: "Task WF",
+      description:
+        "Automated task management workflow integrating WhatsApp, Google Sheets, and Notion. Uses AI to handle intents, sync tasks, and send daily WhatsApp summaries.",
     },
     {
       id: 4,
